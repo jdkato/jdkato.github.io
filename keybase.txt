@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/jdkato
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jdkato.github.io
+  * I am jdkato (https://keybase.io/jdkato) on keybase.
+  * I have a public key with fingerprint 9BAD 7F81 F5E4 D69F 098D  D5D9 C1CA 47B9 E9E1 1303
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012007ab4a8c6ecc7d249902b9437c9528e2a3c0660acce0f057f631f58b1ab9126b0a",
+            "fingerprint": "9bad7f81f5e4d69f098dd5d9c1ca47b9e9e11303",
+            "host": "keybase.io",
+            "key_id": "c1ca47b9e9e11303",
+            "kid": "0101ee655b7a175d1041276906acbcd0057e17779b4a9063505e56257d251ed7e33a0a",
+            "uid": "55242f44bf6914f853ac7d6522b9ee19",
+            "username": "jdkato"
+        },
+        "service": {
+            "hostname": "jdkato.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471453185,
+    "expire_in": 157680000,
+    "prev": "51faf1a0fa5440d2e1a0a2031e2f71d10d1e702451666cf35f777358d452b4ba",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.56
+Comment: https://keybase.io/crypto
+
+yMNxAnicbVJrTBxVGGUpNAixErBoyxJgAlqahc6dmTuzs40h0VJajDxDqNRmO487
+ywDdXfYBRVyBArZSqySmbCWVYCKPVgREolDBsFAitoXGQmERKhYVBUoxghhBrbNo
+f5h4/9x7v+98555zcq8+us3LX+W6ltizcDd4m+q66x27V1bXBVUJxpvEYkxXguWh
+rQ3li8hq0+fJIqbDcEDgOMPxFKcVaCQIjEhQLIsTPEuRjMBCQosIjhRwmsY5QUC4
+hENGokkgQS0POJ4FBM3jHKbBJNloQBazRTbaFFqW50RG0iowRIk0K+GsVhShyApA
+4CiGZxGLACBxUhnMMVk9E4o4nrOiONmk1JSLfkve/+Af6sYBQjSEPMMBBooApwDB
+0CxOcwIviLgiEwGGYVjFmVIkIQ4RpAmo+IMAiQwiSW5Lt32LDkKCIiSK4iWaBZSk
+hSSnREFDQgkCIcB6gFZkMXInkILOFfM4mwlzaDClVigLyBOrx8d/+nEG2ZZj5/9x
+ZLaYbCbBlK90c2w2s1XnmbYVmz3wIsTr/yXS87JRVJJUJgqRxSqbjJgOKEjBJnuY
+AcUACpJACzUYOmmWLUgvexCQobW4sjzvoEKPHyBxEuBwiYMUhYsEUs4cgZMAERID
+lLREgBicoCCgaVqQSCgpWZFQK1KQ4CneE4wVFRhNmI5RZHIGhdIqG4yczW5BmGPA
+9ZKPl8rfa7uvt+eHefk/Evjw3305+tiD0vLejE8GejYL6sJ2nK4vbJqOeW9vafg5
+3wD/IH/xXO5S/HDKjRV30npyVBfTmizybc7N60UzDUZnu+reB5/ONVyO2A4XUnxv
+eWW8mFntPlE5PD+eEBrjTG1R5wU1Jh/P/6EhlG2LPZ2feHvVuz00erWOLbXu+o3g
+08vQzZOp38+skNnR/TXisaql+LKRP3a89cKSKytmw7vMx5wb5yh6tyPt2yeHH/y0
+8+eBQ9UFnU8th8dyuvi+M5GuCOh2ipkjg0OpO5lds6h76f5Q+52mFccVC15xL2pk
+bihpn0/Wsp+pU30wPCy7avjDhgD7r9qLhbFBvhXT686L5weTiIQvTpWXa3SZX9eO
+37aRe3JmFjQ3Zw198/OH1QmflaWnTXbOxdVf+Svrcf3uRdVylWvyUkC5+sDlyMWJ
+jamI1oqz1+LOVGrO3hd9nk1L3P/jfIujG3dTgWFpxs+/KWntSKoWDT2HVjaaR5+e
+/djd73ekNPgJv8Gp/e9nfzQ93Xv4eK+qNmzshmN3R+OemoqctlsgoCI3pC7y6MDb
+9RGNYwcPuLmMtqvSV3fmNh01G+au9JebJp557pW+5uGpFvlISMTg3sW187X2S0Fs
+fUgzO3is8bvfL6z9qT61JurH3KOlb068Pq4WeopXo9b29b8R+Fo0MA6t12SldAf/
+cjS/8u5kSbVzouDV5+v/BhztyMg=
+=FrHc
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jdkato
+
+==================================================================
