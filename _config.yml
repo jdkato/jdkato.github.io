@@ -6,16 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: "The 57th Pick"
+title: ""
 description: "A description for your blog"
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "jdkato.github.io" # the base hostname & protocol for your site
 email: "jdkato24@gmail.com"
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username: "jdkato"
 
 # Build settings
-markdown: redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
-
-redcarpet:
-  extensions: ["tables", "auto_link", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
