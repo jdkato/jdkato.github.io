@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jdkato
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jdkato.github.io
+  * I am jdkato (https://keybase.io/jdkato) on keybase.
+  * I have a public key ASDJ5TwLshpu6jGtidss7p93ligWOiqXJWXhl_e08IWZbQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101f33903416850fc206aa01244f458d19a19e439459fd7f3f181462f415d41d03f0a",
+            "host": "keybase.io",
+            "kid": "0120c9e53c0bb21a6eea31ad89db2cee9f779628163a2a972565e197f7b4f085996d0a",
+            "uid": "55242f44bf6914f853ac7d6522b9ee19",
+            "username": "jdkato"
+        },
+        "service": {
+            "hostname": "jdkato.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1471455954,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1471455806,
+        "hash": "35e5d2b03077b826ad9ae4b8469ab5c5ccb73f4b2c077b8cf6031976dde8bca35254221f2228d5afcf386b3d7bcb4a9799022f9fad0bbdf61b8694b2eac55bfb",
+        "seqno": 585250
+    },
+    "prev": "7f720c724aa7ad5f0abb3cd09599e46272d4728639e08843306e287c0579a60f",
+    "seqno": 15,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyeU8C7IabuoxrYnbLO6fd5YoFjoqlyVl4Zf3tPCFmW0Kp3BheWxvYWTFAvd7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZjMzOTAzNDE2ODUwZmMyMDZhYTAxMjQ0ZjQ1OGQxOWExOWU0Mzk0NTlmZDdmM2YxODE0NjJmNDE1ZDQxZDAzZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzllNTNjMGJiMjFhNmVlYTMxYWQ4OWRiMmNlZTlmNzc5NjI4MTYzYTJhOTcyNTY1ZTE5N2Y3YjRmMDg1OTk2ZDBhIiwidWlkIjoiNTUyNDJmNDRiZjY5MTRmODUzYWM3ZDY1MjJiOWVlMTkiLCJ1c2VybmFtZSI6Impka2F0byJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiamRrYXRvLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE2In0sImN0aW1lIjoxNDcxNDU1OTU0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzE0NTU4MDYsImhhc2giOiIzNWU1ZDJiMDMwNzdiODI2YWQ5YWU0Yjg0NjlhYjVjNWNjYjczZjRiMmMwNzdiOGNmNjAzMTk3NmRkZThiY2EzNTI1NDIyMWYyMjI4ZDVhZmNmMzg2YjNkN2JjYjRhOTc5OTAyMmY5ZmFkMGJiZGY2MWI4Njk0YjJlYWM1NWJmYiIsInNlcW5vIjo1ODUyNTB9LCJwcmV2IjoiN2Y3MjBjNzI0YWE3YWQ1ZjBhYmIzY2QwOTU5OWU0NjI3MmQ0NzI4NjM5ZTA4ODQzMzA2ZTI4N2MwNTc5YTYwZiIsInNlcW5vIjoxNSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEB7viQVjy9cbPMlVEd2OOHk7sRGjOcu7gkomEvpMUidmsuVCXAaV1hG56gelcetx4uWwkmUcb4JHaAERudHGFULqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg9zDFYRt/L9YByJCCXwcw2MrlWfI/WCNhITYhrpTlaOmjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jdkato
+
+==================================================================
