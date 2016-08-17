@@ -12,7 +12,7 @@ I'm a senior at <a href="https://www.pdx.edu">Portland State University</a> stud
 
 ## Contact
 
-Feel free to contact me through <a href="mailto:joseph@jdkato.io">email</a>. You can verify my identity on [Keybase.io](https://keybase.io/jdkato) and encrypt our communications using my [public key](https://keybase.io/jdkato/key.asc). I can also be found on <a href="https://github.com/jdkato">Github</a>.
+Feel free to contact me through <a href="mailto:joseph@jdkato.io">email</a> ([public key](https://keybase.io/jdkato/key.asc)). I can also be found on <a href="https://github.com/jdkato">Github</a>.
 
 ## Recent Posts
 
