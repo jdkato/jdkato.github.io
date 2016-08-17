@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+---
+
+{% for post in site.posts limit:5 %}
+    <h3>
+        {{ post.title }}
+        <small>
+            <i class="fa fa-calendar"></i>
+            {{ post.date | date: '%b. %d, %Y' }}
+        </small>
+    </h3>
+
+    {{ post.excerpt }}
+
+    <a class="btn btn-default btn-sm" href="{{ post.url }}" role="button">
+        <b>Read More</b> <i class="fa fa-angle-double-right fa-lg"></i>
+    </a>
+{% endfor %}
