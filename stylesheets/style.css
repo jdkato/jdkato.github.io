@@ -29,6 +29,7 @@ h2 {
   font-weight: normal;
 }
 
+
 /* ----------------- Links ----------------- */
 
 footer a,
@@ -44,6 +45,7 @@ footer a:visited {
   background-color: #EEEEEE;
 }
 
+
 /* ----------------- Blockquotes ----------------- */
 
 blockquote {
@@ -51,12 +53,14 @@ blockquote {
   color: #777;
 }
 
+
 /* ----------------- Tables ----------------- */
 
 table th,
 table td {
   text-align: center;
 }
+
 
 /* ----------------- Code ----------------- */
 
@@ -103,62 +107,77 @@ pre.prettyprint {
   border-radius: 0 4px 0 4px;
 }
 
+
 /* ----------------- Navbar ----------------- */
 
 .navbar-static-top {
   margin-bottom: 0;
 }
+
 .navbar-default {
   background-color: #fbfbfb;
   border-color: #fbfbfb;
-  border-bottom: 1px solid rgba(0,0,0,0.075);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
+
 .navbar-default .navbar-brand {
   color: #333;
 }
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #337ab7;
 }
+
 .navbar-default .navbar-text {
   color: #333;
 }
+
 .navbar-default .navbar-nav > li > a {
   color: #333;
 }
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #337ab7;
 }
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #337ab7;
   background-color: #fbfbfb;
 }
+
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #337ab7;
   background-color: #fbfbfb;
 }
+
 .navbar-default .navbar-toggle {
   border-color: #fbfbfb;
 }
+
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fbfbfb;
 }
+
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #333;
 }
+
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #333;
 }
+
 .navbar-default .navbar-link {
   color: #333;
 }
+
 .navbar-default .navbar-link:hover {
   color: #337ab7;
 }
@@ -182,11 +201,18 @@ pre.prettyprint {
   }
 }
 
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #f7f7f9;
+}
+
+
 /* ----------------- Footer ----------------- */
 
 .footer-wrapper {
-    padding-top: 30px;
+  padding-top: 30px;
 }
+
 .footer {
   margin-top: 30px;
   position: absolute;
@@ -196,6 +222,7 @@ pre.prettyprint {
   border-top: 1px solid #e5e5e5;
   font-size: 14px;
 }
+
 .footer > .container {
   padding: 15px;
 }
