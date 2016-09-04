@@ -20,6 +20,4 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-archive_path: /pages/archive
-categories_path : /pages/categories
-tags_path : /pages/tags
+tags_path : /tags
