@@ -7,7 +7,7 @@ custom_js:
 - 2016-08-30
 ---
 
-The process of language identification is typically associated with natural languages&mdash;[identifying the language of Tweets](http://www.aclweb.org/anthology/W14-1303), for example. However, after reading a [challenge on HackerRank](https://www.hackerrank.com/challenges/programming-language-detection) about detecting Java, C and Python, I became interested in its application to source code. I found a few other attempts at addressing the problem along the way: 
+Language identification is typically associated with natural languages&mdash;[identifying the language of Tweets](http://www.aclweb.org/anthology/W14-1303), for example. However, after reading a [challenge on HackerRank](https://www.hackerrank.com/challenges/programming-language-detection) about detecting Java, C and Python, I became interested in its application to source code. I found a few other attempts at addressing the problem along the way: 
 
 1. [SourceClassifier by Chris Lowis](http://blog.chrislowis.co.uk/2009/01/04/identify-programming-languages-with-source-classifier.html), which identifies programming languages using a Bayesian classifier pre-trained on C, Java, JavaScript, Perl, Python and Ruby. This project has also been [ported to PHP](http://php-nlp-tools.com/blog/category/programming-language-detection/).
 
@@ -19,7 +19,7 @@ The process of language identification is typically associated with natural lang
 
 I started working on my own solution, [cypher](https://github.com/jdkato/cypher), with the goal of pursuing a strategy similar to (2). My goals were to be accurate, fast and light-weight with minimal reliance on training data. 
 
-## Strategy
+### Strategy
 
 My strategy is based on the creation of "signatures," which are JSON files intended to provide a brief description of my target languages: AppleScript, C#, C++, C, D, Go, Haskell, Java, JavaScript, Julia, Lua, OCaml, Objective-C, Perl, PHP, Python, R, Ruby, Rust, Scala and Swift.
 
@@ -49,7 +49,7 @@ As seen in the Scala example above, each signature consists of five keys:
 
 These signatures are then used as a means of computing how similar a file or snippet is to each of cypher's known languages.
 
-## Implementation
+### Implementation
 
 cypher's core codebase consists 220 lines of Python source (excluding comments) and 21 signatures for a total uncompressed weight of approximately 32 KB. [MessagePack](http://msgpack.org/index.html) is the only external dependency.
 
@@ -103,7 +103,7 @@ Haskell, Lua, AppleScript
 
 The language signatures tell us that `--` is a comment character in only AppleScript, Haskell and Lua. This definitely increases the percentage of correctly identified files, but it also heavily relies on accurately identifying comment delimiters.
 
-## Results
+### Results
 
 **99.4%** of files were correctly identified across the 21 base projects (14,281 files), with C (97.4%) being the least accurate. Haskell was the most common culprit in misidentification cases, contributing significantly to Python and Ruby. However, since the base projects were used to create and refine the signatures, these results are not particularly meaningful.
 
@@ -130,7 +130,7 @@ In order to better measure cypher's ability to identify languages in the "wild,"
   </div>
 </div>
 
-I also tested cypher, the work published by Klein et. al., SourceClassifier (the PHP port) and lang-detector on the [Computer Language Benchmarks Game](https://github.com/nbraud/benchmarksgame) (Heres' work was not tested because it is not free to use).
+I also performed a head-to-head comparison between cypher, the work published by Klein et. al., SourceClassifier (the PHP port) and lang-detector on the [Computer Language Benchmarks Game](https://github.com/nbraud/benchmarksgame) (Heres' work was not tested because it is not free to use).
 
 <table class = "table">
    <caption>Computer Language Benchmarks Game</caption>
@@ -175,11 +175,11 @@ I also tested cypher, the work published by Klein et. al., SourceClassifier (the
    </tbody>
 </table>
 
-As you can see, cypher had the most success at identifying its supported languages while also being the second fastest per file.
+As you can see, cypher had the most success at identifying its supported languages while also being the second fastest per file. It is important to note, though, that the test results for both SourceClassifier and the work of Klein et. al are based solely on the training they provided (lang-detector does not require training).
 
 Finally, in an attempt to measure cypher's ability to identify code snippets (rather than complete files), I used the ["Hello world in every programming language"](https://github.com/leachim6/hello-world) project. **90.5%** (19 / 21) of the "Hello, world" snippets were correctly identified. Lua and Swift were both misidentified as Python. However, the code snippet in both cases&mdash;`print("Hello World")`&mdash;was in fact syntactically-valid Python.
 
-## Conclusion
+### Conclusion
 
 I consider the results discussed above to be a promising start, but there are improvements to be made. Text parsing is the most notable area of need: there is currently no support for distinguishing between, for example, `//` as a comment delimiter and a division operator. This is an even larger issue for languages, such as Matlab, that use common operators as comment delimiters. I believe the key to solving this issue is to consider comments within the overall context of their source. In other words, if a file appears to be non-Matlab according to its tokens and first_line matches, than `%` is probably not a comment delimiter. 
 
@@ -197,13 +197,13 @@ def foo:
     pass
 ```
 
-`import sys` is only so useful as many languages have similar statements. Including the subsequent `from <...> import <...>` statements in our analysis would allow us to consider a considerably smaller candidate list.
+`import sys` is only so useful as many languages have similar statements. Including the subsequent `from <...> import <...>` statements in our analysis would allow us to consider a much smaller candidate list.
 
 Finally, I would like to eliminate the process of scanning each file in the base projects (as mentioned in the implementation section). This aligns with cypher's secondary goals of being standalone (i.e., requiring nothing along the lines of "training data"), light-weight and fast. I currently do this to account for some tokens being more common than others, but ultimately I think it is an unnecessary step. In the future, I plan on creating a "point system" of sorts in which tokens can be hand-assigned values based on their frequency in a given language.
 
 Check back for future updates!
 
-## Further Reading
+### Further Reading
 
 You may be interested in reading *[Identifying source code programming languages through natural language processing](http://dare.uva.nl/cgi/arno/show.cgi?fid=636817)* and *[Predicting Tags for StackOverflow Questions](http://cs229.stanford.edu/proj2013/SchusterZhuCheng-PredictingTagsforStackOverflowQuestions.pdf)*. There is also Github's [Linguist](https://github.com/github/linguist), a project with the goal of identifying files contained in Git repositories.
 
