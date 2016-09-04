@@ -7,7 +7,7 @@ custom_js:
 - 2016-08-30
 ---
 
-Language identification is typically associated with natural languages&mdash;[identifying the language of Tweets](http://www.aclweb.org/anthology/W14-1303), for example. However, after reading a [challenge on HackerRank](https://www.hackerrank.com/challenges/programming-language-detection) about detecting Java, C and Python, I became interested in its application to source code. I found a few other attempts at addressing the problem along the way: 
+Language identification is typically associated with natural languages&mdash;[identifying the language of Tweets](http://www.aclweb.org/anthology/W14-1303), for example. However, after reading a [challenge on HackerRank](https://www.hackerrank.com/challenges/programming-language-detection) about detecting Java, C and Python, I became interested in its application to source code. I found a few other attempts at addressing this topic along the way: 
 
 1. [SourceClassifier by Chris Lowis](http://blog.chrislowis.co.uk/2009/01/04/identify-programming-languages-with-source-classifier.html), which identifies programming languages using a Bayesian classifier pre-trained on C, Java, JavaScript, Perl, Python and Ruby. This project has also been [ported to PHP](http://php-nlp-tools.com/blog/category/programming-language-detection/).
 
@@ -17,7 +17,7 @@ Language identification is typically associated with natural languages&mdash;[id
 
 4. [A recent project by Daniël Heres](https://algorithmia.com/algorithms/PetiteProgrammer/ProgrammingLanguageIdentification) seems to have achieved impressive results using "machine learning and neural networks" across 18 supported languages. He states that, "for more than 99% of the documents we predict the right language in a random subset of the data we use for testing the performance of our model."
 
-I started working on my own solution, [cypher](https://github.com/jdkato/cypher), with the goal of pursuing a strategy similar to (2). My goals were to be accurate, fast and light-weight with minimal reliance on training data. 
+I started working on my own solution, [cypher](https://github.com/jdkato/cypher), with the intent of pursuing a strategy similar to (2). My goals were to be accurate, fast and light-weight with minimal reliance on training data. 
 
 ### Strategy
 
@@ -41,7 +41,7 @@ My strategy is based on the creation of "signatures," which are JSON files inten
 
 As seen in the Scala example above, each signature consists of five keys:
 
-- **tokens**: A combination of keywords, punctuation and operators indicative of a particular language.
+- **tokens**: A combination of keywords, punctuation and operators that are indicative of a particular language.
 - **first_line**: A list of regular expressions designed to match statements typically found on the first line of source code. For example, many Scala files begin with `package <...>` while Python files often start with either an `import` statement or a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)).
 - **unique**: A list of tokens that are uncommon in other languages.
 - **flags**: A list of tokens that should not appear in one language but are found in similar languages. For instance, C# has a keyword `struct` but Java does not.
@@ -51,7 +51,7 @@ These signatures are then used as a means of computing how similar a file or sni
 
 ### Implementation
 
-cypher's core codebase consists 220 lines of Python source (excluding comments) and 21 signatures for a total uncompressed weight of approximately 32 KB. [MessagePack](http://msgpack.org/index.html) is the only external dependency.
+cypher's core codebase consists 220 lines of Python (excluding comments) and 21 signatures for a total uncompressed weight of approximately 32 KB. [MessagePack](http://msgpack.org/index.html) is the only external dependency.
 
 Each language is associated with a "base project," which I used to measure my progress on a per-language basis throughout development. The base projects are also used to create the MessagePack-formatted version of signatures. In addition to being in binary format, the distribution version of a signature also associates each token with its average number of occurrences in its base project.
 
@@ -94,7 +94,7 @@ $ cypher 'print("Hello, world!")' -v -m 4 # returns at most the top-4 guesses
 Python, Julia, Lua, Haskell
 ```
 
-The code snippet `print("Hello, world!")` is syntactically valid in many of our supported languages. We can significantly narrow our candidate pool by making a slight change:
+The code snippet `print("Hello, world!")` is syntactically valid in many of cypher's supported languages. We can significantly narrow our candidate pool by making a slight change:
 
 ```bash
 $ cypher 'print("Hello, world!") -- this is a comment' -v -m 4 
@@ -181,7 +181,7 @@ Finally, in an attempt to measure cypher's ability to identify code snippets (ra
 
 ### Conclusion
 
-I consider the results discussed above to be a promising start, but there are improvements to be made. Text parsing is the most notable area of need: there is currently no support for distinguishing between, for example, `//` as a comment delimiter and a division operator. This is an even larger issue for languages, such as Matlab, that use common operators as comment delimiters. I believe the key to solving this issue is to consider comments within the overall context of their source. In other words, if a file appears to be non-Matlab according to its tokens and first_line matches, than `%` is probably not a comment delimiter. 
+I consider the results discussed above to be a promising start, but there are improvements to be made. Text parsing is the most notable area of need: there is currently no support for distinguishing between, for example, `//` as a comment delimiter and a division operator. This is an even larger issue for languages, such as Matlab, that use common operators as comment delimiters. I believe the key to solving this issue is to consider comments within the overall context of their source. In other words, if a file appears to be non-Matlab according to its tokens and first_line matches, then `%` is probably not a comment delimiter. 
 
 Another means of improving comment detection (and consequently language detection) could be adding a signature key for "function definitions." The primary goal of signatures is to be brief, but I believe that enough languages have a construct along the lines of a "function" to warrant its inclusion.
 
