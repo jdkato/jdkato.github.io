@@ -5,9 +5,9 @@ html {
 
 body {
   margin-bottom: 60px;
-  color: #444;
-  background: #fbfbfb;
+  color: #333;
   font-size: 16px;
+  line-height: 1.5;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -24,7 +24,32 @@ img {
   height: auto
 }
 
-h2 {
+/* ----------------- Tags ----------------- */
+
+.tag-box {
+  margin: 0;
+  overflow: hidden;
+}
+
+.tag-box li {
+  float: left;
+  padding: 3px 3px 10px;
+  margin: 0px;
+}
+
+.tag-box .tag-icon {
+  font-weight: normal;
+  opacity: 0.7;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.tag-box .tag-size {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+.label {
   font-weight: normal;
 }
 
@@ -63,28 +88,27 @@ table td {
 
 /* ----------------- Code ----------------- */
 
+code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgb(247, 247, 247);
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #444;
+}
+
 pre {
-  overflow-x: auto;
-}
-
-pre code {
-  overflow-wrap: normal;
-  white-space: pre;
-}
-
-pre.prettyprint {
-  /*padding: 8px 12px;*/
+  padding: 8px 12px;
   /*border: 1px solid #bbb;*/
   /*border-radius: 4px;*/
   border: none;
   /*background-color: #fbfbfb;*/
-  background-color: rgb(244, 244, 244);
-  font-size: 14px;
-}
-
-.highlight pre code:first-child {
-  display: inline-block;
-  padding-right: 45px;
+  /*background-color: rgb(244, 244, 244);*/
+  background-color: rgb(247, 247, 247);
+  /*font-size: 14px;*/
 }
 
 .zero-clipboard {
@@ -101,9 +125,13 @@ pre.prettyprint {
   font-size: 12px;
   color: #569bea;
   cursor: pointer;
+  /*background-color: rgb(244, 244, 244);*/
   background-color: #f7f7f9;
+  /*background-color: #fff;*/
   /*border: 1px solid #F8F8F8;*/
-  border-radius: 0 4px 0 4px;
+  /*border-radius: 0 4px 0 4px;*/
+  /*border: 1px solid #bbb;*/
+  /*border-radius: 4px;*/
 }
 
 
@@ -117,6 +145,7 @@ pre.prettyprint {
   background-color: #fbfbfb;
   border-color: #fbfbfb;
   border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  font-weight: bold;
 }
 
 .navbar-default .navbar-brand {
