@@ -11,9 +11,14 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ /feed.xml | prepend: site.baseurl | prepend: site.url }}">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/vendor/google-code-prettify/prettify.css">
     <link rel="stylesheet" href="/vendor/katex/katex.min.css">
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/pygments.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    {% if page.custom_css %}
+      {% for stylesheet in page.custom_css %}
+        <link rel="stylesheet" href="/stylesheets/{{ stylesheet }}.css" media="screen" type="text/css">
+      {% endfor %}
+    {% endif %}
 </head>

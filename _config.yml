@@ -14,4 +14,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username: "jdkato"
 
 # Build settings
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+archive_path: /pages/archive/
+categories_path : /pages/categories/
+tags_path : /pages/tags/
