@@ -24,6 +24,14 @@ img {
   height: auto
 }
 
+.equation {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 1em;
+}
+
+
 /* ----------------- Tags ----------------- */
 
 .tag-box {
