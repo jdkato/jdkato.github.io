@@ -114,7 +114,7 @@ var lang2Stats = {
   ]
 }
 
-var summary = "1817 / 1843 total Python files in the base project (Django) were correctly identified. In the random project (PokemonGo-Bot), 87 / 88 files were correctly identified."
+var summary = '1817 / 1843 total Python files in the base project (Django) were correctly identified. In the random project (PokemonGo-Bot), 87 / 88 files were correctly identified.'
 var ctx = document.getElementById('base-acc-chart').getContext('2d')
 var accuracyChart = new Chart(ctx, {
   type: 'bar',
@@ -137,8 +137,8 @@ var accuracyChart = new Chart(ctx, {
       var base = '<a href="' + stats[1] + '">' + stats[0] + '</a>'
       var random = '<a href="' + stats[4] + '">' + stats[3] + '</a>'
       var summary = stats[2] + ' total ' + lang + ' files in the base project (' +
-      base + ') were correctly identified. In the random project (' + random +
-      '), ' + stats[5] + ' files were correctly identified.'
+        base + ') were correctly identified. In the random project (' + random +
+        '), ' + stats[5] + ' files were correctly identified.'
       $('#summary').html(summary)
       $('#modal-lang').html(lang)
       $('#myModal').modal()
