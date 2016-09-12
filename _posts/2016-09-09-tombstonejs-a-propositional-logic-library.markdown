@@ -146,3 +146,7 @@ While Tombstone.js is still in its early stages of development, I think this is 
 I am also considering re-writing the project (that is, the two files it currently contains) in [TypeScript](https://www.typescriptlang.org/). This seems like it would offer a number of interesting features without sacrificing browser support, which is something I would like to keep as high as possible.
 
 Check back for future updates!
+
+### References
+
+- Allen, Colin and Michael Hand. *Logic Primer*. Cambridge, Mass.: MIT Press, 2001. Print.
