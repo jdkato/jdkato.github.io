@@ -616,7 +616,7 @@ function tableToMarkdown (table) {
   var row = []
   var header = table['variables'].slice()
 
-  header.push(table['statement'])
+  header.push(table['statement'].replace(/\|/g, '&#124;'))
   rows.push(header)
   for (var i = 0; i < table['rows'].length; ++i) {
     row = []
@@ -2025,7 +2025,7 @@ function escape(html, encode) {
 }
 
 function unescape(html) {
-	// explicitly match decimal, hex, and named HTML entities
+	// explicitly match decimal, hex, and named HTML entities 
   return html.replace(/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/g, function(_, n) {
     n = n.toLowerCase();
     if (n === 'colon') return ':';
