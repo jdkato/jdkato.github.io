@@ -116,6 +116,7 @@ $('#parse-md').on('click', function (event) {
 
 var stages = [{"symbol":"(","output":[],"stack":["("]},{"symbol":"P","output":["P"],"stack":["("]},{"symbol":"&","output":["P"],"stack":["(","&"]},{"symbol":"~","output":["P"],"stack":["(","&","~"]},{"symbol":"Q","output":["P","Q"],"stack":["(","&","~"]},{"symbol":")","output":["P","Q","~","&"],"stack":[]},{"symbol":"->","output":["P","Q","~","&"],"stack":["->"]},{"symbol":"S","output":["P","Q","~","&","S"],"stack":["->"]},{"symbol":null,"output":["P","Q","~","&","S","->"],"stack":null}]
 var numStages = stages.length
+var i = 1
 
 $('#parse-rpn').on('click', function (event) {
   var formula = $('#formula-rpn').val()
@@ -124,24 +125,29 @@ $('#parse-rpn').on('click', function (event) {
   if (error) {
     return
   }
+  $('#tab_logic tbody').find('tr:gt(1)').remove()
+  $('#addr1').html('<tr id="addr1></tr>')
   stages = statement.convertToRPNDemo(symbols)
   numStages = stages.length
+  i = 1
   var output = stages[0]['output'] || ''
   var stack = stages[0]['stack'] || ''
   var symbol = stages[0]['symbol'] || ''
   $('#addr0').html('<td>' + symbol + "<td>" +
       output.toString().split(',').join(', ') + "</td><td>" +
       stack.toString().split(',').join(', ') + "</td>")
-  $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>')
+  $('#delete_row').addClass('disabled')
+  $('#add_row').removeClass('disabled')
 })
 
 $(document).ready(function () {
-  var i = 1
   $('#add_row').click(function () {
     $('#delete_row').removeClass('disabled')
+    console.log(i, JSON.stringify(stages))
     var output = stages[i]['output'] || ''
     var stack = stages[i]['stack'] || ''
     var symbol = stages[i]['symbol'] || ''
+    console.log('adding', symbol)
     $('#addr' + i).html('<td>' + symbol + "<td>" +
       output.toString().split(',').join(', ') + "</td><td>" +
       stack.toString().split(',').join(', ') + "</td>")
@@ -2025,7 +2031,7 @@ function escape(html, encode) {
 }
 
 function unescape(html) {
-	// explicitly match decimal, hex, and named HTML entities 
+	// explicitly match decimal, hex, and named HTML entities
   return html.replace(/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/g, function(_, n) {
     n = n.toLowerCase();
     if (n === 'colon') return ':';
