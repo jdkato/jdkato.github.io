@@ -322,6 +322,8 @@ function checkWellFormed (symbols) {
 
   if (opening !== closing) {
     error = 'unbalanced parentheses!'
+  } else if (symbols.length === (opening + closing)) {
+    error = 'no symbols!'
   }
   return error
 }
