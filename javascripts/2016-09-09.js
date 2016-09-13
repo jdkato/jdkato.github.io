@@ -367,7 +367,7 @@ function convertToRPN (symbols) {
       outQueue.push(symbol)
     } else if (symbol === ')') {
       closingParen = false
-      while (!closingParen) {
+      while (!closingParen && opStack[opStack.length - 1] !== '(') {
         outQueue.push(opStack.pop())
         closingParen = opStack[opStack.length - 1] === '('
       }
