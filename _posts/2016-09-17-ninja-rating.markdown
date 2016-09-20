@@ -76,7 +76,7 @@ The workaround for (1) is to only use the official clock (rather than a stopwatc
 
 We see that Kevin's total time (56.4 seconds) matches his [official clocking](http://sasukepedia.wikia.com/wiki/American_Ninja_Warrior_7) even though the individual splits are hand-timed estimates. Using this technique, I have taken splits for all of season 7's Qualifying and City Finals episodes. Ultimately, I would like to have data dating back to at least season 4.
 
-The data is recorded in [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) format, sorted by course type (i.e., Qualifying or City Finals) and season. It is then converted into a [SQLite](https://www.sqlite.org/) database. This data will be completely free and open-source; everything I record will be made available on the project's [Github repository](https://github.com/jdkato/ninjaref). I have also started writing [timing guidelines](https://github.com/jdkato/ninjaref/wiki/Timing-Guidelines), should anyone else want to help out.
+The data is recorded in [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) format, sorted by course type (i.e., Qualifying or City Finals) and season. It is then converted into a [PostgreSQL](https://www.postgresql.org) database. This data will be completely free and open-source; everything I record will be made available on the project's [Github repository](https://github.com/jdkato/ninjaref). I have also started writing [timing guidelines](https://github.com/jdkato/ninjaref/wiki/Timing-Guidelines), should anyone else want to help out.
 
 ### Sample Results
 
