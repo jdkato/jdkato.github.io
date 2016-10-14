@@ -45,7 +45,7 @@ As seen in the Scala example above, each signature consists of five keys:
 - **first_line**: A list of regular expressions designed to match statements typically found on the first line of source code. For example, many Scala files begin with `package <...>` while Python files often start with either an `import` statement or a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)).
 - **unique**: A list of tokens that are uncommon in other languages.
 - **flags**: A list of tokens that should not appear in one language but are found in similar languages. For instance, C# has a keyword `struct` but Java does not.
-- **ignores**: A list of tokens that represent that start of a line or block that should be excluded from consideration&mdash;such as comments and strings.
+- **ignores**: A list of tokens that represent the start of a line or block that should be excluded from consideration&mdash;such as comments and strings.
 
 These signatures are then used as a means of computing how similar a file or snippet is to each of cypher's known languages.
 
