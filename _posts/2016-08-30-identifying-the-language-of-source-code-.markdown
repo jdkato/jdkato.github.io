@@ -1,7 +1,7 @@
 ---
 title: Identifying the Language of Source Code
 layout: post
-tags : [Projects, Python, cypher]
+tags : [Projects, Python]
 custom_js:
 - Chart.bundle.min
 - 2016-08-30

@@ -1,7 +1,7 @@
 ---
 title: "Tombstone.js: A Propositional Logic Library"
 layout: post
-tags : [Projects, JavaScript, Tombstone, Algorithms]
+tags : [Projects, JavaScript, Algorithms]
 custom_css:
 - 2016-09-09
 custom_js:
