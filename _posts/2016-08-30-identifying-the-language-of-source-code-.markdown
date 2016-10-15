@@ -17,7 +17,7 @@ Language identification is typically associated with natural languages&mdash;[id
 
 4. [A recent project by Daniël Heres](https://algorithmia.com/algorithms/PetiteProgrammer/ProgrammingLanguageIdentification) seems to have achieved impressive results using "machine learning and neural networks" across 18 supported languages. He states that, "for more than 99% of the documents we predict the right language in a random subset of the data we use for testing the performance of our model."
 
-I started working on my own solution, [cypher](https://github.com/jdkato/cypher), with the intent of pursuing a strategy similar to (2). My goals were to be accurate, fast and light-weight with minimal reliance on training data. 
+I started working on my own solution, [codetype](https://github.com/jdkato/codetype), with the intent of pursuing a strategy similar to (2). My goals were to be accurate, fast and light-weight with minimal reliance on training data. 
 
 ### Strategy
 
@@ -47,15 +47,15 @@ As seen in the Scala example above, each signature consists of five keys:
 - **flags**: A list of tokens that should not appear in one language but are found in similar languages. For instance, C# has a keyword `struct` but Java does not.
 - **ignores**: A list of tokens that represent the start of a line or block that should be excluded from consideration&mdash;such as comments and strings.
 
-These signatures are then used as a means of computing how similar a file or snippet is to each of cypher's known languages.
+These signatures are then used as a means of computing how similar a file or snippet is to each of codetype's known languages.
 
 ### Implementation
 
-cypher's core codebase consists 220 lines of Python (excluding comments) and 21 signatures for a total uncompressed weight of approximately 32 KB. [MessagePack](http://msgpack.org/index.html) is the only external dependency.
+codetype's core codebase consists 220 lines of Python (excluding comments) and 21 signatures for a total uncompressed weight of approximately 32 KB. [MessagePack](http://msgpack.org/index.html) is the only external dependency.
 
 Each language is associated with a "base project," which I used to measure my progress on a per-language basis throughout development. The base projects are also used to create the MessagePack-formatted version of signatures. In addition to being in binary format, the distribution version of a signature also associates each token with its average number of occurrences in its base project.
 
-When a file or string is passed to cypher, it is split into tokens according to [this regular expression](https://github.com/jdkato/cypher/blob/master/cypher/re_globals.py#L1). A signature is then generated from the tokens and compared to each known signature according to the following algorithm:
+When a file or string is passed to codetype, it is split into tokens according to [this regular expression](https://github.com/jdkato/codetype/blob/master/codetype/re_globals.py#L1). A signature is then generated from the tokens and compared to each known signature according to the following algorithm:
 
 ```python
 total = 1.0
@@ -87,17 +87,17 @@ The similarity scores for each known language are then filtered by their values 
 - If only one of `first_line` and `ignores` have matches, we take the highest score from that set.
 - If neither `first_line` nor `ignores` have matches, we simply take the highest score across all known languages.
 
-Consider, for example, the following output from cypher's CLI tool:
+Consider, for example, the following output from codetype's CLI tool:
 
 ```bash
-$ cypher 'print("Hello, world!")' -v -m 4 # returns at most the top-4 guesses
+$ codetype 'print("Hello, world!")' -v -m 4 # returns at most the top-4 guesses
 Python, Julia, Lua, Haskell
 ```
 
-The code snippet `print("Hello, world!")` is syntactically valid in many of cypher's supported languages. We can significantly narrow our candidate pool by making a slight change:
+The code snippet `print("Hello, world!")` is syntactically valid in many of codetype's supported languages. We can significantly narrow our candidate pool by making a slight change:
 
 ```bash
-$ cypher 'print("Hello, world!") -- this is a comment' -v -m 4 
+$ codetype 'print("Hello, world!") -- this is a comment' -v -m 4 
 Haskell, Lua, AppleScript
 ```
 
@@ -107,7 +107,7 @@ The language signatures tell us that `--` is a comment character in only AppleSc
 
 **99.4%** of files were correctly identified across the 21 base projects (14,281 files), with C (97.4%) being the least accurate. Haskell was the most common culprit in misidentification cases, contributing significantly to Python and Ruby. However, since the base projects were used to create and refine the signatures, these results are not particularly meaningful.
 
-In order to better measure cypher's ability to identify languages in the "wild," I also tested a project from Github's list of trending repositories for each language. In these randomly-selected projects (7,084 files), **97.8%** of files were correctly identified. C and OCaml, at 92.9% and 92.2% respectively, were the least accurate. A summary of the results is shown below (click on a bar for more information).
+In order to better measure codetype's ability to identify languages in the "wild," I also tested a project from Github's list of trending repositories for each language. In these randomly-selected projects (7,084 files), **97.8%** of files were correctly identified. C and OCaml, at 92.9% and 92.2% respectively, were the least accurate. A summary of the results is shown below (click on a bar for more information).
 
 <div class="row">
   <div class="col-xs-12">
@@ -130,7 +130,7 @@ In order to better measure cypher's ability to identify languages in the "wild,"
   </div>
 </div>
 
-I also performed a head-to-head comparison between cypher, the work published by Klein et. al., SourceClassifier (the PHP port) and lang-detector on the [Computer Language Benchmarks Game](https://github.com/nbraud/benchmarksgame) (Heres' work was not tested because it is not free to use).
+I also performed a head-to-head comparison between codetype, the work published by Klein et. al., SourceClassifier (the PHP port) and lang-detector on the [Computer Language Benchmarks Game](https://github.com/nbraud/benchmarksgame) (Heres' work was not tested because it is not free to use).
 
 <table class = "table">
    <caption>Computer Language Benchmarks Game</caption>
@@ -145,7 +145,7 @@ I also performed a head-to-head comparison between cypher, the work published by
    </thead>
    <tbody>
       <tr>
-         <td>cypher</td>
+         <td>codetype</td>
          <td>21</td>
          <td>621</td>
          <td>98.7</td>
@@ -175,9 +175,9 @@ I also performed a head-to-head comparison between cypher, the work published by
    </tbody>
 </table>
 
-As you can see, cypher had the most success at identifying its supported languages while also being the second fastest per file. It is important to note, though, that the test results for both SourceClassifier and the work of Klein et. al are based solely on the training they provided (lang-detector does not require training).
+As you can see, codetype had the most success at identifying its supported languages while also being the second fastest per file. It is important to note, though, that the test results for both SourceClassifier and the work of Klein et. al are based solely on the training they provided (lang-detector does not require training).
 
-Finally, in an attempt to measure cypher's ability to identify code snippets (rather than complete files), I used the ["Hello world in every programming language"](https://github.com/leachim6/hello-world) project. **90.5%** (19 / 21) of the "Hello, world" snippets were correctly identified. Lua and Swift were both misidentified as Python. However, the code snippet in both cases&mdash;`print("Hello World")`&mdash;was in fact syntactically-valid Python.
+Finally, in an attempt to measure codetype's ability to identify code snippets (rather than complete files), I used the ["Hello world in every programming language"](https://github.com/leachim6/hello-world) project. **90.5%** (19 / 21) of the "Hello, world" snippets were correctly identified. Lua and Swift were both misidentified as Python. However, the code snippet in both cases&mdash;`print("Hello World")`&mdash;was in fact syntactically-valid Python.
 
 ### Conclusion
 
@@ -199,7 +199,7 @@ def foo:
 
 `import sys` is only so useful as many languages have similar statements. Including the subsequent `from <...> import <...>` statements in our analysis would allow us to consider a much smaller candidate list.
 
-Finally, I would like to eliminate the process of scanning each file in the base projects (as mentioned in the implementation section). This aligns with cypher's secondary goals of being standalone (i.e., requiring nothing along the lines of "training data"), light-weight and fast. I currently do this to account for some tokens being more common than others, but ultimately I think it is an unnecessary step. In the future, I plan on creating a "point system" of sorts in which tokens can be hand-assigned values based on their frequency in a given language.
+Finally, I would like to eliminate the process of scanning each file in the base projects (as mentioned in the implementation section). This aligns with codetype's secondary goals of being standalone (i.e., requiring nothing along the lines of "training data"), light-weight and fast. I currently do this to account for some tokens being more common than others, but ultimately I think it is an unnecessary step. In the future, I plan on creating a "point system" of sorts in which tokens can be hand-assigned values based on their frequency in a given language.
 
 Check back for future updates!
 
