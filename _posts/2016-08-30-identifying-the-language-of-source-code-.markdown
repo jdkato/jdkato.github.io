@@ -107,7 +107,7 @@ The language signatures tell us that `--` is a comment character in only AppleSc
 
 **99.4%** of files were correctly identified across the 21 base projects (14,281 files), with C (97.4%) being the least accurate. Haskell was the most common culprit in misidentification cases, contributing significantly to Python and Ruby. However, since the base projects were used to create and refine the signatures, these results are not particularly meaningful.
 
-In order to better measure codetype's ability to identify languages in the "wild," I also tested a project from Github's list of trending repositories for each language. In these randomly-selected projects (7,084 files), **97.8%** of files were correctly identified. C and OCaml, at 92.9% and 92.2% respectively, were the least accurate. A summary of the results is shown below (click on a bar for more information).
+In order to better measure codetype's ability to identify languages in the "wild," I also tested a project from Github's list of trending repositories for each language. In these randomly selected projects (7,084 files), **97.8%** of files were correctly identified. C and OCaml, at 92.9% and 92.2% respectively, were the least accurate. A summary of the results is shown below (click on a bar for more information).
 
 <div class="row">
   <div class="col-xs-12">
@@ -130,7 +130,7 @@ In order to better measure codetype's ability to identify languages in the "wild
   </div>
 </div>
 
-I also performed a head-to-head comparison between codetype, the work published by Klein et. al., SourceClassifier (the PHP port) and lang-detector on the [Computer Language Benchmarks Game](https://github.com/nbraud/benchmarksgame) (Heres' work was not tested because it is not free to use).
+I also performed a head-to-head comparison between codetype, the work published by Klein et al., SourceClassifier (the PHP port) and lang-detector on the [Computer Language Benchmarks Game](https://github.com/nbraud/benchmarksgame) (Heres' work was not tested because it is not free to use).
 
 <table class = "table">
    <caption>Computer Language Benchmarks Game</caption>
@@ -177,7 +177,7 @@ I also performed a head-to-head comparison between codetype, the work published 
 
 As you can see, codetype had the most success at identifying its supported languages while also being the second fastest per file. It is important to note, though, that the test results for both SourceClassifier and the work of Klein et. al are based solely on the training they provided (lang-detector does not require training).
 
-Finally, in an attempt to measure codetype's ability to identify code snippets (rather than complete files), I used the ["Hello world in every programming language"](https://github.com/leachim6/hello-world) project. **90.5%** (19 / 21) of the "Hello, world" snippets were correctly identified. Lua and Swift were both misidentified as Python. However, the code snippet in both cases&mdash;`print("Hello World")`&mdash;was in fact syntactically-valid Python.
+Finally, in an attempt to measure codetype's ability to identify code snippets (rather than complete files), I used the ["Hello world in every programming language"](https://github.com/leachim6/hello-world) project. **90.5%** (19 / 21) of the "Hello, world" snippets were correctly identified. Lua and Swift were both misidentified as Python. However, the code snippet in both cases&mdash;`print("Hello World")`&mdash;was in fact syntactically valid Python.
 
 ### Conclusion
 
