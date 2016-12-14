@@ -19,5 +19,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
 
 tags_path : /tags
