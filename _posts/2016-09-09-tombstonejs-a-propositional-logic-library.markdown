@@ -139,7 +139,7 @@ Now that we can evaluate arbitrary WFFs, generating truth tables is just a matte
 
 While Tombstone.js is still in its early stages of development, I think this is a promising start. An approximate roadmap for future development is as follows.
 
-- Extend truth table generation to allow for copying in HTML, Markdown, $\LaTeX$, rich text or plain text;
+- Extend truth table generation to allow for copying in HTML, Markdown, $\LaTeX$, reStructuredText or plain text;
 - add the ability to analyze proofs; and
 - create a website to showcase Tombstone.js.
 
