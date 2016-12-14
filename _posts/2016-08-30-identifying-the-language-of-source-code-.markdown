@@ -166,7 +166,7 @@ I also performed a head-to-head comparison between codetype, the work published 
          <td>0.005</td>
       </tr>
       <tr>
-         <td>Klein et. al</td>
+         <td>Klein et al.</td>
          <td>24</td>
          <td>643</td>
          <td>20.2</td>
