@@ -22,16 +22,6 @@
                             <a href="/">Home</a>
                         </li>
 
-                        {% if page.title == 'Blog' %}
-                        <li class="active">
-                        {% else %}
-                        <li>
-                        {% endif %}
-                            <a href="/blog">
-                                Blog
-                            </a>
-                        </li>
-
                         {% if page.title == 'Projects' %}
                         <li class="active">
                         {% else %}
@@ -39,6 +29,16 @@
                         {% endif %}
                             <a href="/projects">
                                 Projects
+                            </a>
+                        </li>
+
+                        {% if page.title == 'Blog' %}
+                        <li class="active">
+                        {% else %}
+                        <li>
+                        {% endif %}
+                            <a href="/blog">
+                                Blog
                             </a>
                         </li>
                     </ul>
