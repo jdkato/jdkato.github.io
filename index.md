@@ -31,7 +31,7 @@ I took a number of computer science credits as well (one course shy of a minor, 
 
 ### Further Learning
 
-At [Code School](https://www.codeschool.com/users/jdkato) I've passed <strong id='courses'>0</strong> courses and earned <strong id='points'>0</strong> points. Check out some of my lastest badges below:
+At [Code School](https://www.codeschool.com/users/jdkato) I've passed <strong>16</strong> courses and earned <strong id='points'>0</strong> points. Check out some of my lastest badges below:
 
 <div class="report-card codeschool well"></div>
 
