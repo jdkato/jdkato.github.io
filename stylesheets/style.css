@@ -292,6 +292,7 @@ pre {
   padding: 15px;
 }
 
+
 /* ----------------- Bootstrap examples ----------------- */
 
 .bs-example-form .input-group {
@@ -305,10 +306,13 @@ pre {
   border-color: #e5e5e5 #eee #eee;
   border-style: solid;
   border-width: 1px 0;
-  -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-          box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
 }
+
+
 /* Echo out a label for the example */
+
 .bs-example:after {
   position: absolute;
   top: 15px;
@@ -324,7 +328,9 @@ pre {
   padding-bottom: 24px;
 }
 
+
 /* Tweak display of the code snippets when following an example */
+
 .bs-example + .highlight,
 .bs-example + .zero-clipboard + .highlight {
   margin: -15px -15px 15px;
@@ -332,7 +338,9 @@ pre {
   border-radius: 0;
 }
 
+
 /* Make the examples and snippets not full-width */
+
 @media (min-width: 768px) {
   .bs-example {
     margin-right: 0;
@@ -342,7 +350,7 @@ pre {
     border-width: 1px;
     border-radius: 4px 4px 0 0;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   .bs-example + .highlight,
   .bs-example + .zero-clipboard + .highlight {
@@ -358,12 +366,16 @@ pre {
   }
 }
 
+
 /* Undo width of container */
+
 .bs-example .container {
   width: auto;
 }
 
+
 /* Tweak content of examples for optimum awesome */
+
 .bs-example > p:last-child,
 .bs-example > ul:last-child,
 .bs-example > ol:last-child,
@@ -380,22 +392,28 @@ pre {
 .bs-example > .table-responsive:last-child > .table {
   margin-bottom: 0;
 }
+
 .bs-example > p > .close {
   float: none;
 }
 
+
 /* Typography */
+
 .bs-example-type .table .type-info {
   color: #767676;
   vertical-align: middle;
 }
+
 .bs-example-type .table td {
   padding: 15px 0;
   border-color: #eee;
 }
+
 .bs-example-type .table tr:first-child td {
   border-top: 0;
 }
+
 .bs-example-type h1,
 .bs-example-type h2,
 .bs-example-type h3,
@@ -405,89 +423,117 @@ pre {
   margin: 0;
 }
 
+
 /* Contextual background colors */
+
 .bs-example-bg-classes p {
   padding: 15px;
 }
 
+
 /* Images */
+
 .bs-example > .img-circle,
 .bs-example > .img-rounded,
 .bs-example > .img-thumbnail {
   margin: 5px;
 }
 
+
 /* Tables */
+
 .bs-example > .table-responsive > .table {
   background-color: #fff;
 }
 
+
 /* Buttons */
+
 .bs-example > .btn,
 .bs-example > .btn-group {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .bs-example > .btn-toolbar + .btn-toolbar {
   margin-top: 10px;
 }
 
+
 /* Forms */
+
 .bs-example-control-sizing select,
 .bs-example-control-sizing input[type="text"] + input[type="text"] {
   margin-top: 10px;
 }
+
 .bs-example-form .input-group {
   margin-bottom: 10px;
 }
+
 .bs-example > textarea.form-control {
   resize: vertical;
 }
 
+
 /* List groups */
+
 .bs-example > .list-group {
   max-width: 400px;
 }
 
+
 /* Navbars */
+
 .bs-example .navbar:last-child {
   margin-bottom: 0;
 }
+
 .bs-navbar-top-example,
 .bs-navbar-bottom-example {
   z-index: 1;
   padding: 0;
-  overflow: hidden; /* cut the drop shadows off */
+  overflow: hidden;
+  /* cut the drop shadows off */
 }
+
 .bs-navbar-top-example .navbar-header,
 .bs-navbar-bottom-example .navbar-header {
   margin-left: 0;
 }
+
 .bs-navbar-top-example .navbar-fixed-top,
 .bs-navbar-bottom-example .navbar-fixed-bottom {
   position: relative;
   margin-right: 0;
   margin-left: 0;
 }
+
 .bs-navbar-top-example {
   padding-bottom: 45px;
 }
+
 .bs-navbar-top-example:after {
   top: auto;
   bottom: 15px;
 }
+
 .bs-navbar-top-example .navbar-fixed-top {
   top: -1px;
 }
+
 .bs-navbar-bottom-example {
   padding-top: 45px;
 }
+
 .bs-navbar-bottom-example .navbar-fixed-bottom {
   bottom: -1px;
 }
+
 .bs-navbar-bottom-example .navbar {
   margin-bottom: 0;
 }
+
 @media (min-width: 768px) {
   .bs-navbar-top-example .navbar-fixed-top,
   .bs-navbar-bottom-example .navbar-fixed-bottom {
