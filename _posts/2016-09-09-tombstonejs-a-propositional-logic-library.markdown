@@ -74,7 +74,7 @@ From here, I decided to use the [shunting-yard algorithm](https://en.wikipedia.o
     <div class="col-xs-12">
             <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Formula</span>
-                <input id="formula-rpn" class="form-control" placeholder="(P & ~Q) -> S" aria-describedby="basic-addon1"> <span class="input-group-btn"> <button id="parse-rpn" class="btn btn-default" type="button">Parse</button> </span></div>
+                <input id="formula-rpn" class="form-control" placeholder="(P & ~Q) -> S" aria-describedby="basic-addon1"> <span class="input-group-btn"> <button id="parse-rpn" class="btn btn-default" type="button">Evaluate</button> </span></div>
         </div>
         <div class="col-xs-12">
             <table class="table" id="tab_logic">
@@ -112,7 +112,7 @@ Once in RPN, we can easily evaluate the expression or construct a graphical repr
         <div class="col-xs-12">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon2">Formula</span>
-                <input id="formula" class="form-control" placeholder="(P & ~Q) -> S" aria-describedby="basic-addon2"> <span class="input-group-btn"> <button id="parse" class="btn btn-default" type="button">Parse</button> </span> </div>
+                <input id="formula" class="form-control" placeholder="(P & ~Q) -> S" aria-describedby="basic-addon2"> <span class="input-group-btn"> <button id="parse" class="btn btn-default" type="button">Evaluate</button> </span> </div>
         </div>
         <div class="col-xs-12">
             <div id="tree"></div>
@@ -129,7 +129,7 @@ Now that we can evaluate arbitrary WFFs, generating truth tables is just a matte
         <div class="col-xs-12">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon2">Formula</span>
-                <input id="formula-md" class="form-control" placeholder="(P & ~Q) -> S" aria-describedby="basic-addon2"> <span class="input-group-btn"> <button id="parse-md" class="btn btn-default" type="button">Parse</button> </span> </div>
+                <input id="formula-md" class="form-control" placeholder="(P & ~Q) -> S" aria-describedby="basic-addon2"> <span class="input-group-btn"> <button id="parse-md" class="btn btn-default" type="button">Evaluate</button> </span> </div>
         </div>
     </div>
     <div id="md-table"></div>
