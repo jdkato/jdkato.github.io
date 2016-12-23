@@ -1,6 +1,7 @@
 ---
 title: "ANW7 (Part 1): A Look Back at a Historic Season"
 layout: post
+tags : [ANW]
 custom_css:
 - 2016-09-09
 custom_js:
