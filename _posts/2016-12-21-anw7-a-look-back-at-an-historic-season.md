@@ -161,6 +161,6 @@ As you can see, the default parameters compare the two fastest runners of the ni
 
 In the next post in this series, I plan to take a closer look at the Qualifying and City Finals episodes: Which course and obstacle were the most difficult? Who had the most impressive run?
 
-I've also considered making this data freely available through a website consisting of information such as a leaderboard (overall, men, and women) of the top-15 competitors and an individualized profile page for each competitor containing career, course and obstacle statistics. I'll discuss this idea more thoroughly in future posts.
+I've also considered making this data freely available through a website consisting of information such as a leaderboard (overall, men, and women) of the top-15 competitors and an individualized profile page for each competitor containing career, course and obstacle statistics. I'll discuss this idea more thoroughly in future posts but, in the meantime, you can stop by the project's [Github repository](https://github.com/jdkato/ninjaref).
 
 As always, feel free to [contact me](/) with any comments or suggestions.
