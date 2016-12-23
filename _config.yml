@@ -7,7 +7,7 @@
 
 # Site settings
 title: ""
-description: "A description for your blog"
+description: "A blog about sports, math, and programming"
 url: "jdkato.github.io" # the base hostname & protocol for your site
 email: "jdkato24@gmail.com"
 baseurl: "" # the subpath of your site, e.g. /blog
