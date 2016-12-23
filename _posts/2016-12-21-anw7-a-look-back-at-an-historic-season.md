@@ -64,7 +64,7 @@ As I watched each episode, I created CSV files consisting of rows like the follo
 Kevin Bull,30,M,2.76,2.44,7.0,1.13,1.13,1.2,9.03,3.34,19.0,5.5,3.87,56.4,Completed
 ```
 
-These CSV files are then converted into a SQLite database (the structure of which is seen above), making the answers to many interesting questions a mere query away. For example, the fastest times on the Quintuple Steps from Venice Qualifying:
+These CSV files are then converted into a SQLite database (the structure of which is shown above), making the answers to many interesting questions a mere query away. For example, the fastest times on the Quintuple Steps from Venice Qualifying:
 
 <ul class="nav nav-tabs" id="product-table">
   <li><a href="#1" data-toggle="tab">Results</a></li>
