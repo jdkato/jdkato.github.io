@@ -70,7 +70,7 @@ These CSV files are then converted into a SQLite database (the structure of whic
 <td align="left">Kevin Bull</td>
 <td align="left">Venice</td>
 <td align="left">Qualifying</td>
-<td align="right">2.76</td>
+<td align="right">2.73</td>
 </tr>
 <tr class="even">
 <td align="left">Brendon Ayanbadejo</td>
