@@ -1,5 +1,5 @@
 .bs-example:after {
-  content: "DEMO";
+  content: none;
 }
 
 .control-btn {

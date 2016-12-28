@@ -14,6 +14,7 @@
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="https://www.highcharts.com/samples/static/highslide-full.min.js"></script>
   <script src="https://www.highcharts.com/samples/static/highslide.config.js" charset="utf-8"></script>
@@ -70,7 +71,12 @@
   </script>
   <script type="text/javascript">
   [].forEach.call(document.getElementsByTagName('table'), function(el) {
-    el.classList.add('table', 'table-bordered', 'table-responsive', 'table-striped')
+    el.classList.add('table', 'table-responsive', 'table-striped')
+  })
+  </script>
+  <script type="text/javascript">
+    [].forEach.call(document.getElementsByClassName('table-demo'), function(el) {
+    el.classList.remove('table-striped')
   })
   </script>
   <script type="text/javascript">

@@ -3,11 +3,8 @@ layout: default
 title: Home
 permalink: /index
 custom_css:
-- treehouse
-- badges
+- about
 custom_js:
-- treehouse
-- reportcard
 ---
 
 ## About
@@ -21,25 +18,61 @@ My name is Joseph Kato. I'm a software and web development enthusiast from Portl
 Feel free to contact me through email at <img class="inline-img" src="img/inline-em.png"> (<a href="https://keybase.io/jdkato/key.asc">public key</a>) or <a href="blog.html">check out my blog</a>. I can also be found at <a href="https://github.com/jdkato">Github</a>, <a href="https://www.reddit.com/user/jdkato/">Reddit</a>, and <a href="https://forum.sublimetext.com/users/jdkato/activity">the Sublime Text forum</a>.
 </div>
 
+---
 
-
-### Education
-
-I have an undergraduate degree in mathematics from [Portland State University](http://www.pdx.edu/math/bsba-in-mathematics) (2012 - 2016; GPA: 3.81 / 4.00). My areas of interests are numerical analysis and statistics&mdash;some of my most relevant courses are Applied Linear Algebra ([MTH 343](http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Mth-Mathematical-Sciences/300/Mth-343)), Numerical Calculus ([MTH 451 - 452](http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Mth-Mathematical-Sciences/400/Mth-451)), Applied Statistics ([STAT 451 - 452](http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Stat-Statistics/400/Stat-451)), and Mathematical Statistics ([STAT 461](http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Stat-Statistics/400/Stat-461)).
-
-I took a number of computer science credits as well (one course shy of a minor, in fact), including Introduction to Operating Systems ([CS 333](https://www.pdx.edu/computer-science/cs333)), Elements of Software Engineering ([CS 300](https://www.pdx.edu/computer-science/cs300)), and Data Structures ([CS 163](https://www.pdx.edu/computer-science/cs163)). I also took [Coding The Matrix: Linear Algebra Through Computer Science Applications](http://codingthematrix.com/) and [Web Application Architectures](https://www.coursera.org/learn/web-app) through Coursera.
-
-### Further Learning
-
-At [Code School](https://www.codeschool.com/users/jdkato) I've completed <strong>16</strong> courses and earned <strong id='points'>0</strong> points. Check out some of my lastest badges below:
-
-<div class="report-card codeschool well"></div>
-
-I've earned <strong id='total'>0</strong> points at [Treehouse](https://teamtreehouse.com/josephkato), currently placing me in the 99th percentile. Below is a topic-wise summary of what I’ve studied:
-
-<div class="team-treehouse well">
-    <div class="pieChart group">
-      <div class="pie"></div>
-      <div class="legend"></div>
-    </div>
-</div> 
+<div class="container">
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="fa fa-area-chart" aria-hidden="true"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><a href="http://www.pdx.edu/math/bsba-in-mathematics">Portland State University, 2012 - 2016</a></h4>
+              <h5 class="timeline-title">B.S. in Mathematics, magna cum laude (GPA: 3.81 / 4.00)</h5>
+              <hr>
+            </div>
+            <div class="timeline-body">
+              <p class="panel-text">My areas of interests are numerical analysis and statistics—some of my most relevant courses are Applied Linear Algebra (<a href="http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Mth-Mathematical-Sciences/300/Mth-343">MTH 343</a>), Numerical Calculus (<a href="http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Mth-Mathematical-Sciences/400/Mth-451">MTH 451 - 452</a>), Applied Statistics (<a href="http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Stat-Statistics/400/Stat-451">STAT 451 - 452</a>), and Mathematical Statistics (<a href="http://pdx.smartcatalogiq.com/en/2016-2017/Bulletin/Courses/Stat-Statistics/400/Stat-461">STAT 461</a>).</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><a href="https://www.coursera.org/">Coursera</a></h4>
+              <h5 class="timeline-title">Python &amp; Ruby on Rails</h5>  
+              <hr>
+            </div>
+            <div class="timeline-body">
+              <p  class="panel-text">I’ve taken <a href="http://codingthematrix.com/">Coding The Matrix: Linear Algebra Through Computer Science Applications</a> and <a href="https://www.coursera.org/learn/web-app">Web Application Architectures</a> through Coursera.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><a href="https://teamtreehouse.com/josephkato">Treehouse</a></h4>
+              <h5 class="timeline-title">Ruby, CSS, iOS, Android, PHP, JavaScript &amp; Python</h5>  
+              <hr>
+            </div>
+            <div class="timeline-body">
+              <p  class="panel-text">I’ve earned <strong>35,334</strong> points at Treehouse, currently placing me in the 99th percentile.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><a href="https://www.codeschool.com/users/jdkato">Code School</a></h4>
+              <h5 class="timeline-title">CSS, JavaScript &amp; CoffeeScript</h5>
+              <hr>
+            </div>
+            <div class="timeline-body">
+              <p  class="panel-text">I’ve completed <strong>16</strong> courses and earned <strong>167,565</strong> points.</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>

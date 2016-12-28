@@ -27,30 +27,14 @@ The workaround for (1) is to only use the official clock (rather than a stopwatc
 
 | Transition | Elapsed Time (sec) |     Obstacle     | Elapsed Time (sec) |
 |:----------:|:------------------:|:----------------:|:------------------:|
-|      0     |          0         |  Quintuple Steps |        2.76        |
-|      1     |        2.44        | Mini Silk Slider |        7.0        |
-|      2     |        1.13        |   Tilting Table  |        1.13        |
-|      3     |        1.2        |    Spin Cycle    |        9.03        |
-|      4     |        3.34        |  Hourglass Drop  |        19.0       |
-|      5     |        5.5        |    Warped Wall   |        3.87        |
+|      0     |          0         |  Quintuple Steps |        2.73        |
+|      1     |        7.09        | Mini Silk Slider |        2.41        |
+|      2     |        1.07        |   Tilting Table  |        1.29        |
+|      3     |        1.14        |    Spin Cycle    |        8.93        |
+|      4     |        3.50        |  Hourglass Drop  |        18.91       |
+|      5     |        5.56        |    Warped Wall   |        3.77        |
 
-We see that the sum of Kevin's individual splits (56.4 seconds) matches his [official clocking](http://sasukepedia.wikia.com/wiki/American_Ninja_Warrior_7). And while this may seem rather time consuming at first glance, it doesn't require much more effort than simply watching does. This is especially true since I've written two simple Python scripts to do most of the heavy lifting: [split_taking.py](https://gist.github.com/jdkato/e2b5fabe2daf795e2438469c944d4409) (for courses with no time limit) and [split_taking_mt.py](https://gist.github.com/jdkato/072f400daef57191283123351fad328e) (for courses with a time limit&mdash;e.g., 2:30.00). Here's the shell session from the above example:
-
-```
-split:  00:02.76
-split:  00:05.20
-split:  00:12.20
-split:  00:13.33
-split:  00:14.46
-split:  00:15.66
-split:  00:24.69
-split:  00:28.03
-split:  00:47.03
-split:  00:52.53
-split:  00:56.40
-split:  
-2.76,2.44,7.0,1.13,1.13,1.2,9.03,3.34,19.0,5.5,3.87,56.4,
-```
+We see that the sum of Kevin's individual splits (56.4 seconds) matches his [official clocking](http://sasukepedia.wikia.com/wiki/American_Ninja_Warrior_7). And while this may seem rather time consuming at first glance, it doesn't require much more effort than simply watching does. This is especially true since I've written two simple Python scripts to do most of the heavy lifting: [split_taking.py](https://gist.github.com/jdkato/e2b5fabe2daf795e2438469c944d4409) (for courses with no time limit) and [split_taking_mt.py](https://gist.github.com/jdkato/072f400daef57191283123351fad328e) (for courses with a time limit&mdash;e.g., 2:30.00).
 
 (2) and (3), on the other hand, are simply limitations of the method: we're going to have incomplete data due to some runs not being shown and we're going to have some inaccuracy introduced by inconvenient camera positions. That said, I still think this project provides an interesting look at the role that data and statistics could play in ANW.
 
@@ -61,7 +45,7 @@ split:
 As I watched each episode, I created CSV files consisting of rows like the following:
 
 ```
-Kevin Bull,30,M,2.76,2.44,7.0,1.13,1.13,1.2,9.03,3.34,19.0,5.5,3.87,56.4,Completed
+Kevin Bull,30,M,2.73,7.09,2.41,1.07,1.29,1.14,8.93,3.50,18.91,5.56,3.77,56.4,Completed
 ```
 
 These CSV files are then converted into a SQLite database (the structure of which is shown above), making the answers to many interesting questions a mere query away. For example, the fastest times on the Quintuple Steps from Venice Qualifying:
@@ -137,9 +121,9 @@ These CSV files are then converted into a SQLite database (the structure of whic
 
 I'm sure this list isn't particularly surprising to anyone who follows ANW but, as you can probably imagine, a database like this can answer *many* more questions (some of which will be discussed in subsequent posts).
 
-### Course Flow
+### Run Flow
 
-The first visualization we're going to discuss is called the "Course Flow." It attempts to provide a means for both analyzing an individual run and comparing two different runs. Check it out below!
+The first visualization we're going to discuss is called the "Run Flow." It attempts to provide a means for both analyzing an individual run and comparing two different runs. Check it out below!
 
 <form class="bs-example bs-example-form" data-example-id="input-group-with-button">
     <div class="row">
