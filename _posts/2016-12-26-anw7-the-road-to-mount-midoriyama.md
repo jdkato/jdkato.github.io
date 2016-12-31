@@ -176,7 +176,7 @@ In the finals, James McGrath not only posted the fastest finish time but he also
 
 ### Up Next
 
-In the next post, we'll recap the action at Mount Midoriyama: from all-time records of 38 and 8 competitors completing stage 1 and 2 respectively, to witnessing the crowning of America's first Ninja Warrior. 
+In the next post, we'll recap the action at Mount Midoriyama: from all-time records of 38 and 8 competitors completing stage 1 and 2 respectively, to witnessing the crowning of the first American Ninja Warrior. 
 
 ---
 
