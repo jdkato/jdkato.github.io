@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% assign post = page %}
+{% assign tags_list = page.tags %}
+
+<article>
+    <header id="post-header">
+        <h2 class="page-header" id="post-title">
+            {{ post.title }}
+            <small>
+                <i class="fa fa-calendar"></i>
+                {{ post.date | date: '%b. %d, %Y' }}
+            </small>
+        </h2>
+    </header>
+    <div id="post-content">{{ content }}</div>
+</article>
+
+{% include tags.html %}
+

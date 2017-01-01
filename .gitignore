@@ -1,8 +1,9 @@
-_site/
+public
+src/assets/bundle.js
+node_modules
+
 .sass-cache/
 .jekyll-metadata
 
-*.sublime-project
 *.sublime-workspace
-
 *.log

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Blog
+permalink: /blog
+---
+
+{% for post in site.posts limit:5 %}
+    <h3>
+        {{ post.title }}
+        <small>
+            <i class="fa fa-calendar"></i>
+            {{ post.date | date: '%b. %d, %Y' }}
+        </small>
+    </h3>
+<blockquote>
+  {{ post.excerpt }}
+  <a href="{{ post.url }}">... Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</blockquote>
+{% endfor %}
