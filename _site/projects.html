@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon-bar-chart.ico" />
+    <title>Projects</title>
+    <meta name="description" content="A blog about sports, math, and programming">
+
+    <link rel="canonical" href="http://localhost:4000/projects">
+    <link rel="alternate" type="application/rss+xml" title="jdkato.github.io" href="http://localhost:4000">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="/vendor/bootstrap/non-responsive.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><i class="fa fa-bar-chart" aria-hidden="true"></i> jdkato.io</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        
+                        <li>
+                        
+                            <a href="/">Home</a>
+                        </li>
+
+                        
+                        <li class="active">
+                        
+                            <a href="/projects">
+                                Projects
+                            </a>
+                        </li>
+
+                        
+                        <li>
+                        
+                            <a href="/blog">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <div id="content" class="container">
+</div>
+  <div class="footer-wrapper">
+  <footer class="footer">
+    <div class="container text-center">
+      &copy; 2017 Joseph Kato, unless otherwise noted &nbsp;|&nbsp;
+      <a href="https://github.com/jdkato">
+        <i class="fa fa-github-square fa-lg"></i>
+      </a>
+      &nbsp;|&nbsp;
+      <a href="mailto:joseph@jdkato.io">
+        <i class="fa fa-envelope fa-lg"></i>
+      </a>
+      &nbsp;|&nbsp;
+      <a href="/feed.xml">
+        <i class="fa fa-rss fa-lg"></i>
+      </a>
+      <span class="mobile-hide">
+        &nbsp;|&nbsp;
+        Powered by GitHub Pages, Bootstrap &amp; Jekyll
+      </span>
+    </div>
+  </footer>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  <script src="/vendor/ZeroClipboard/ZeroClipboard.min.js" type="text/javascript"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$', '$']],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true
+    }
+  })
+  </script>
+  <script type="text/javascript">
+  [].forEach.call(document.getElementsByTagName('table'), function(el) {
+    el.classList.add('table', 'table-responsive', 'table-striped')
+  })
+  </script>
+  <script type="text/javascript">
+    [].forEach.call(document.getElementsByClassName('table-demo'), function(el) {
+    el.classList.remove('table-striped')
+  })
+  </script>
+  <script type="text/javascript">
+  ZeroClipboard.config({
+    moviePath: '/vendor/ZeroClipboard/ZeroClipboard.swf',
+    hoverClass: 'btn-clipboard-hover'
+  })
+
+  $('.highlight').each(function() {
+    var btnHtml = '<div class="zero-clipboard mobile-hide"><span class="btn-clipboard">Copy</span></div>'
+    $(this).before(btnHtml)
+  })
+  var zeroClipboard = new ZeroClipboard($('.btn-clipboard'))
+  var $htmlBridge = $('#global-zeroclipboard-html-bridge')
+
+  zeroClipboard.on('load', function() {
+    $htmlBridge.data('placement', 'top').attr('title', 'Copy to clipboard').tooltip();
+  })
+
+  zeroClipboard.on('dataRequested', function(client) {
+    var highlight = $(this).parent().nextAll('.highlight').first()
+    client.setText(highlight.text())
+  })
+
+  zeroClipboard.on('complete', function() {
+    $htmlBridge
+      .attr('title', 'Copied!')
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle');
+  })
+
+  zeroClipboard.on('noflash wrongflash', function() {
+    $('.zero-clipboard').remove()
+    ZeroClipboard.destroy()
+  })
+  </script>
+  <script type="text/javascript">
+  $('[data-toggle="popover"]').popover({
+    'trigger': 'hover',
+    'placement': 'top',
+    'html': true
+  })
+  </script>
+  
+</body>
+
+</html>

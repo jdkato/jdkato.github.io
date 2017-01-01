@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon-bar-chart.ico" />
+    <title>Tombstone.js: A Propositional Logic Library</title>
+    <meta name="description" content="Propositional logic (or propositional calculus) is, according to Wikipedia, “a branch of mathematical logic concerned with the study of propositions (whether...">
+
+    <link rel="canonical" href="http://localhost:4000/2016/09/09/tombstonejs-a-propositional-logic-library.html">
+    <link rel="alternate" type="application/rss+xml" title="jdkato.github.io" href="http://localhost:4000">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="/vendor/bootstrap/non-responsive.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+      
+        <link rel="stylesheet" href="/css/2016-09-09.css" media="screen" type="text/css">
+      
+    
+</head>
+
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><i class="fa fa-bar-chart" aria-hidden="true"></i> jdkato.io</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        
+                        <li>
+                        
+                            <a href="/">Home</a>
+                        </li>
+
+                        
+                        <li>
+                        
+                            <a href="/projects">
+                                Projects
+                            </a>
+                        </li>
+
+                        
+                        <li>
+                        
+                            <a href="/blog">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <div id="content" class="container">
+
+
+<article>
+    <header id="post-header">
+        <h2 class="page-header" id="post-title">
+            Tombstone.js: A Propositional Logic Library
+            <small>
+                <i class="fa fa-calendar"></i>
+                Sep. 09, 2016
+            </small>
+        </h2>
+    </header>
+    <div id="post-content"><p>Propositional logic (or propositional calculus) is, <a href="https://en.wikipedia.org/wiki/Propositional_calculus">according to Wikipedia</a>, “a branch of mathematical logic concerned with the study of propositions (whether they are true or false) that are formed by other propositions with the use of logical connectives, and how their value depends on the truth value of their components.”</p>
+
+<p>I was introduced to this topic during my third-year of college in a course titled Introduction to Formal Logic. I did not have high expectations going in (my primary motivation was avoiding more writing-intensive electives), but it turned out to be one of my favorite courses. One aspect that I found particularly intriguing about the course was that much of the material seemed to lend itself nicely to automation – whether it be the construction of truth tables or even the analysis of proofs. Indeed, there are a number of existing online tools such as:</p>
+
+<ul>
+  <li>The <a href="http://logic.tamu.edu/daemon.html">Logic Daemon</a> by Texas A&amp;M University, which “checks proofs and can provide hints for students attempting to construct proofs in a natural deduction system for sentential (propositional) and first-order predicate (quantifier) logic”;</li>
+  <li>truth table generators by <a href="http://mrieppel.net/prog/truthtable.html">Michael Rieppel</a>, <a href="http://jamie-wong.com/experiments/truthtabler/SLR1/">Jamie Wong</a> or <a href="http://turner.faculty.swau.edu/mathematics/materialslibrary/truth/">Lawrence Turner</a> (among others); and</li>
+  <li>the various utilities developed by <a href="http://logictools.org/index.html">Logictools</a>.</li>
+</ul>
+
+<p>I intend to re-implement (and, where possible, try to improve upon) much of the functionality mentioned above with the goals of gaining a more thorough understanding of the topic and releasing a full-featured, open-source library named <a href="https://github.com/jdkato/Tombstone.js">Tombstone.js</a> (if you’re wondering why I chose the name “Tombstone,” it was inspired by the <a href="https://en.wikipedia.org/wiki/Tombstone_(typography)">typographical symbol</a>).</p>
+
+<h3 id="evaluating-well-formed-formulas">Evaluating Well-Formed Formulas</h3>
+
+<p>The first step was to implement the ability to evaluate arbitrary <a href="https://en.wikipedia.org/wiki/Well-formed_formula">well-formed formulas</a> (WFFs). This requires a definition of our vocabulary, which consists of sentence variables ($\{A,B, \dots, Z\}$), parentheses and connectives.</p>
+
+<table class="table">
+   <caption>Logical Connectives (descending order of precedence)</caption>
+   <thead>
+      <tr>
+         <th>Symbol</th>
+         <th>Name</th>
+         <th>Example</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>~</td>
+         <td>negation</td>
+         <td>~P ("not P")</td>
+      </tr>
+      <tr>
+         <td>&amp;</td>
+         <td>conjunction</td>
+         <td>P &amp; Q ("P and Q")</td>
+      </tr>
+      <tr>
+         <td>||</td>
+         <td>disjunction</td>
+         <td>P || Q ("P or Q")</td>
+      </tr>
+      <tr>
+         <td>-&gt;</td>
+         <td>implication</td>
+         <td>P -&gt; Q ("If P, then Q")</td>
+      </tr>
+      <tr>
+         <td>&lt;-&gt;</td>
+         <td>equivalence</td>
+         <td>P &lt;-&gt; Q ("P if and only if Q")</td>
+      </tr>
+   </tbody>
+</table>
+
+<p>A formula is considered well-formed according to the following conditions:</p>
+
+<ol>
+  <li>All sentence variables are WFFs.</li>
+  <li>If $\phi$ is a WFF, then ~$\phi$ is also a WFF.</li>
+  <li>If $\phi$ and $\psi$ are WFFs, then ($\phi$ &amp; $\psi$), ($\phi$ || $\psi$), ($\phi$ -&gt; $\psi$) and ($\phi$ &lt;-&gt; $\psi$) are WFFs.</li>
+  <li>Nothing else is a WFF.</li>
+</ol>
+
+<p>From here, I decided to use the <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">shunting-yard algorithm</a> to convert WFFs to <a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">Reverse Polish notation</a> (RPN) for evaluation. In RPN, every operator follows its operands – for example, <code class="highlighter-rouge">P &amp; Q</code> becomes <code class="highlighter-rouge">P Q &amp;</code>. This parsing strategy is more commonly associated with mathematical expressions but it seems to work well for logic too. You can see the algorithm in action below.</p>
+
+<form class="bs-example bs-example-form" data-example-id="input-group-with-button">
+    <div class="row clearfix">
+    <div class="col-xs-12">
+            <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Formula</span>
+                <input id="formula-rpn" class="form-control" placeholder="(P &amp; ~Q) -&gt; S" aria-describedby="basic-addon1" /> <span class="input-group-btn"> <button id="parse-rpn" class="btn btn-default" type="button">Evaluate</button> </span></div>
+        </div>
+        <div class="col-xs-12">
+            <table class="table" id="tab_logic">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            Token
+                        </th>
+                        <th class="text-center">
+                            Output
+                        </th>
+                        <th class="text-center">
+                            Operator Stack
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="addr0">
+                        <td>(</td>
+                        <td></td>
+                        <td>(</td>
+                    </tr>
+                    <tr id="addr1"></tr>
+                </tbody>
+            </table>
+        </div>
+        <a id="add_row" class="btn btn-default pull-left control-btn">Next Step</a><a id="delete_row" class="pull-right btn btn-default control-btn disabled">Back</a>
+    </div>
+</form>
+
+<p>Once in RPN, we can easily evaluate the expression or construct a graphical representation of the formula’s structure (known as a <a href="https://en.wikipedia.org/wiki/Parse_tree">parse tree</a>) as seen below.</p>
+
+<form class="bs-example bs-example-form" data-example-id="input-group-with-button">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">Formula</span>
+                <input id="formula" class="form-control" placeholder="(P &amp; ~Q) -&gt; S" aria-describedby="basic-addon2" /> <span class="input-group-btn"> <button id="parse" class="btn btn-default" type="button">Evaluate</button> </span> </div>
+        </div>
+        <div class="col-xs-12">
+            <div id="tree"></div>
+        </div>
+    </div>
+</form>
+
+<h3 id="truth-tables">Truth Tables</h3>
+
+<p>Now that we can evaluate arbitrary WFFs, generating truth tables is just a matter of evaluating an expression at all of its variable combinations.</p>
+
+<form class="bs-example bs-example-form" data-example-id="input-group-with-button">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">Formula</span>
+                <input id="formula-md" class="form-control" placeholder="(P &amp; ~Q) -&gt; S" aria-describedby="basic-addon2" /> <span class="input-group-btn"> <button id="parse-md" class="btn btn-default" type="button">Evaluate</button> </span> </div>
+        </div>
+    </div>
+    <div id="md-table"></div>
+</form>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>While Tombstone.js is still in its early stages of development, I think this is a promising start. An approximate roadmap for future development is as follows.</p>
+
+<ul>
+  <li>Extend truth table generation to allow for copying in HTML, Markdown, $\LaTeX$, reStructuredText or plain text;</li>
+  <li>add the ability to analyze proofs; and</li>
+  <li>create a website to showcase Tombstone.js.</li>
+</ul>
+
+<p>I am also considering re-writing the project (that is, the two files it currently contains) in <a href="https://www.typescriptlang.org/">TypeScript</a>. This seems like it would offer a number of interesting features without sacrificing browser support, which is something I would like to keep as high as possible.</p>
+
+<p>Check back for future updates!</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li>Allen, Colin and Michael Hand. <em>Logic Primer</em>. Cambridge, Mass.: MIT Press, 2001. Print.</li>
+</ul>
+</div>
+</article>
+
+
+<ul class="tag-box list-inline list-unstyled">
+  <li class="tag-icon"><i class="fa fa-tags" aria-hidden="true"></i></li>
+
+  
+    <li><a class="label label-success" href="/tags#Projects-ref">Projects <span class="tag-size">2</span></a></li>
+  
+
+</ul>
+
+
+
+</div>
+  <div class="footer-wrapper">
+  <footer class="footer">
+    <div class="container text-center">
+      &copy; 2017 Joseph Kato, unless otherwise noted &nbsp;|&nbsp;
+      <a href="https://github.com/jdkato">
+        <i class="fa fa-github-square fa-lg"></i>
+      </a>
+      &nbsp;|&nbsp;
+      <a href="mailto:joseph@jdkato.io">
+        <i class="fa fa-envelope fa-lg"></i>
+      </a>
+      &nbsp;|&nbsp;
+      <a href="/feed.xml">
+        <i class="fa fa-rss fa-lg"></i>
+      </a>
+      <span class="mobile-hide">
+        &nbsp;|&nbsp;
+        Powered by GitHub Pages, Bootstrap &amp; Jekyll
+      </span>
+    </div>
+  </footer>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  <script src="/vendor/ZeroClipboard/ZeroClipboard.min.js" type="text/javascript"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$', '$']],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true
+    }
+  })
+  </script>
+  <script type="text/javascript">
+  [].forEach.call(document.getElementsByTagName('table'), function(el) {
+    el.classList.add('table', 'table-responsive', 'table-striped')
+  })
+  </script>
+  <script type="text/javascript">
+    [].forEach.call(document.getElementsByClassName('table-demo'), function(el) {
+    el.classList.remove('table-striped')
+  })
+  </script>
+  <script type="text/javascript">
+  ZeroClipboard.config({
+    moviePath: '/vendor/ZeroClipboard/ZeroClipboard.swf',
+    hoverClass: 'btn-clipboard-hover'
+  })
+
+  $('.highlight').each(function() {
+    var btnHtml = '<div class="zero-clipboard mobile-hide"><span class="btn-clipboard">Copy</span></div>'
+    $(this).before(btnHtml)
+  })
+  var zeroClipboard = new ZeroClipboard($('.btn-clipboard'))
+  var $htmlBridge = $('#global-zeroclipboard-html-bridge')
+
+  zeroClipboard.on('load', function() {
+    $htmlBridge.data('placement', 'top').attr('title', 'Copy to clipboard').tooltip();
+  })
+
+  zeroClipboard.on('dataRequested', function(client) {
+    var highlight = $(this).parent().nextAll('.highlight').first()
+    client.setText(highlight.text())
+  })
+
+  zeroClipboard.on('complete', function() {
+    $htmlBridge
+      .attr('title', 'Copied!')
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle');
+  })
+
+  zeroClipboard.on('noflash wrongflash', function() {
+    $('.zero-clipboard').remove()
+    ZeroClipboard.destroy()
+  })
+  </script>
+  <script type="text/javascript">
+  $('[data-toggle="popover"]').popover({
+    'trigger': 'hover',
+    'placement': 'top',
+    'html': true
+  })
+  </script>
+  
+  
+    <script src='/js/2016-09-09.js' type="text/javascript"></script>
+  
+  
+</body>
+
+</html>
