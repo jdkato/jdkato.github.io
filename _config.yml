@@ -14,7 +14,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username: "jdkato"
 
 # Build settings
-source: src
 markdown: kramdown
 
 kramdown:

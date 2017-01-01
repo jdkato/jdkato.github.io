@@ -2,7 +2,7 @@
 layout: default
 title: Home
 permalink: /index
-specfic_css:
+specific_css:
 - /css/about.css
 ---
 
