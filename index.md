@@ -2,8 +2,6 @@
 layout: default
 title: Home
 permalink: /index
-specific_css:
-- /css/about.css
 ---
 
 ## About
@@ -35,7 +33,7 @@ Feel free to contact me through email at <img class="inline-img" src="img/inline
           </div>
         </li>
         <li class="timeline-inverted">
-          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></i></div>
+          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title"><a href="https://www.coursera.org/">Coursera</a></h4>
@@ -48,7 +46,7 @@ Feel free to contact me through email at <img class="inline-img" src="img/inline
           </div>
         </li>
         <li>
-          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></i></div>
+          <div class="timeline-badge"><i class="fa fa-code" aria-hidden="true"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title"><a href="https://teamtreehouse.com/josephkato">Treehouse</a></h4>
