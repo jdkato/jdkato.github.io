@@ -3,8 +3,7 @@ layout: default
 title: Home
 permalink: /index
 custom_css:
-- about
-custom_js:
+- /css/about.css
 ---
 
 ## About
