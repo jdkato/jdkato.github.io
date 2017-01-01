@@ -2,6 +2,8 @@
 title: On Identifying the Language of Source Code
 layout: post
 tags : [Projects]
+specific_css:
+- /vendor/pygments.min.css
 specific_js:
 - /vendor/Chart.bundle.min.js
 - /js/2016-08-30.js

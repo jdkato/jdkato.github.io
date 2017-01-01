@@ -5,6 +5,7 @@ tags : [Projects]
 specific_css:
 - /css/2016-09-09.css
 specific_js:
+- https://d3js.org/d3.v3.min.js
 - /js/2016-09-09.js
 ---
 
