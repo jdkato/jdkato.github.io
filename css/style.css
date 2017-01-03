@@ -23,8 +23,6 @@
  * grid system, and navbar.
  */
 
-/* END */
-
 /* Reset the container */
 .container {
   width: 980px;
@@ -107,6 +105,8 @@
   color: #999 !important;
   background-color: transparent !important;
 }
+
+/* END */
 
 html {
   position: relative;
