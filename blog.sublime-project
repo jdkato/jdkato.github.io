@@ -3,9 +3,18 @@
 	[
 		{
 			"path": "."
-		},
-		{
-			"path": "/Users/Joseph/Dropbox/ninja/database"
 		}
-	]
+	],
+    "build_systems":
+    [
+        {
+            "cmd":
+            [
+                "jekyll",
+                "serve",
+            ],
+            "name": "Jekyll: Serve",
+            "working_dir": "${project_path}"
+        }
+    ]
 }
