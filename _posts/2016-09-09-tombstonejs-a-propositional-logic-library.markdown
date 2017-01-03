@@ -2,10 +2,12 @@
 title: "Tombstone.js: A Propositional Logic Library"
 layout: post
 tags : [Projects]
+includes:
+- d3
+- mathjax
 specific_css:
 - /css/2016-09-09.css
 specific_js:
-- https://d3js.org/d3.v3.min.js
 - /js/2016-09-09.js
 ---
 

@@ -1,0 +1,37 @@
+<script src="/vendor/ZeroClipboard/ZeroClipboard.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  ZeroClipboard.config({
+    moviePath: '/vendor/ZeroClipboard/ZeroClipboard.swf',
+    hoverClass: 'btn-clipboard-hover'
+  })
+
+  $('.highlight').each(function() {
+    var btnHtml = '<div class="zero-clipboard mobile-hide"><span class="btn-clipboard">Copy</span></div>'
+    $(this).before(btnHtml)
+  })
+  var zeroClipboard = new ZeroClipboard($('.btn-clipboard'))
+  var $htmlBridge = $('#global-zeroclipboard-html-bridge')
+
+  zeroClipboard.on('load', function() {
+    $htmlBridge.data('placement', 'top').attr('title', 'Copy to clipboard').tooltip();
+  })
+
+  zeroClipboard.on('dataRequested', function(client) {
+    var highlight = $(this).parent().nextAll('.highlight').first()
+    client.setText(highlight.text())
+  })
+
+  zeroClipboard.on('complete', function() {
+    $htmlBridge
+      .attr('title', 'Copied!')
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle');
+  })
+
+  zeroClipboard.on('noflash wrongflash', function() {
+    $('.zero-clipboard').remove()
+    ZeroClipboard.destroy()
+  })
+  </script>

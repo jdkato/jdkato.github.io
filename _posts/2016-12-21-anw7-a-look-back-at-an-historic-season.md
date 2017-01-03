@@ -2,14 +2,11 @@
 title: "ANW7 (Part 1): A Look Back at a Historic Season"
 layout: post
 tags : [ANW]
+includes:
+- highcharts
 specific_css:
-- /vendor/highcharts/highslide.min.css
 - /css/2016-09-09.css
 specific_js:
-- /vendor/highcharts/highcharts.min.js
-- /vendor/highcharts/highcharts-more.min.js
-- /vendor/highcharts/data.min.js
-- /vendor/bootstrap3-typeahead.min.js
 - /js/2016-09-17.js
 - /js/2016-12-21.js
 ---

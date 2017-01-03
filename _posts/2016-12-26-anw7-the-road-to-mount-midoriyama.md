@@ -2,12 +2,9 @@
 title: "ANW7 (Part 2): The Road to Mount Midoriyama"
 layout: post
 tags : [ANW]
-specific_css:
-- /vendor/highcharts/highslide.min.css
+includes:
+- highcharts
 specific_js:
-- /vendor/highcharts/highcharts.min.js
-- /vendor/highcharts/highcharts-more.min.js
-- /vendor/highcharts/data.min.js
 - /js/2016-09-17.js
 - /js/2016-12-26.js
 ---
