@@ -4,6 +4,7 @@ layout: post
 tags : [ANW]
 includes:
 - highcharts
+- typeahead
 specific_css:
 - /css/2016-09-09.css
 specific_js:
