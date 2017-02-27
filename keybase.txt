@@ -6,7 +6,7 @@ I hereby claim:
 
   * I am an admin of https://jdkato.github.io
   * I am jdkato (https://keybase.io/jdkato) on keybase.
-  * I have a public key ASDJ5TwLshpu6jGtidss7p93ligWOiqXJWXhl_e08IWZbQo
+  * I have a public key with fingerprint E374 305F 11CF 8879 591C  8083 72B6 1C8B C681 C52E
 
 To do so, I am signing this object:
 
@@ -14,10 +14,17 @@ To do so, I am signing this object:
     "body": {
         "key": {
             "eldest_kid": "0101f33903416850fc206aa01244f458d19a19e439459fd7f3f181462f415d41d03f0a",
+            "fingerprint": "e374305f11cf8879591c808372b61c8bc681c52e",
             "host": "keybase.io",
-            "kid": "0120c9e53c0bb21a6eea31ad89db2cee9f779628163a2a972565e197f7b4f085996d0a",
+            "key_id": "72b61c8bc681c52e",
+            "kid": "0101614d4657d387d2adc3dce523434540b57a4d3ec67ce895d3efe93e4c81297d290a",
             "uid": "55242f44bf6914f853ac7d6522b9ee19",
             "username": "jdkato"
+        },
+        "revoke": {
+            "sig_ids": [
+                "7756be7bc1571df856973df6768f0dce546e1fac2c9cf1af068dcc709bebb80a0f"
+            ]
         },
         "service": {
             "hostname": "jdkato.github.io",
@@ -26,25 +33,45 @@ To do so, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.16"
-    },
-    "ctime": 1471455954,
-    "expire_in": 504576000,
-    "merkle_root": {
-        "ctime": 1471455806,
-        "hash": "35e5d2b03077b826ad9ae4b8469ab5c5ccb73f4b2c077b8cf6031976dde8bca35254221f2228d5afcf386b3d7bcb4a9799022f9fad0bbdf61b8694b2eac55bfb",
-        "seqno": 585250
-    },
-    "prev": "7f720c724aa7ad5f0abb3cd09599e46272d4728639e08843306e287c0579a60f",
-    "seqno": 15,
+    "ctime": 1488221101,
+    "expire_in": 157680000,
+    "prev": "fe66ea2d1e5ac30bd651c53dc54cdaccc6feeeb31429e4699ea12cd2325407b7",
+    "seqno": 22,
     "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyeU8C7IabuoxrYnbLO6fd5YoFjoqlyVl4Zf3tPCFmW0Kp3BheWxvYWTFAvd7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZjMzOTAzNDE2ODUwZmMyMDZhYTAxMjQ0ZjQ1OGQxOWExOWU0Mzk0NTlmZDdmM2YxODE0NjJmNDE1ZDQxZDAzZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzllNTNjMGJiMjFhNmVlYTMxYWQ4OWRiMmNlZTlmNzc5NjI4MTYzYTJhOTcyNTY1ZTE5N2Y3YjRmMDg1OTk2ZDBhIiwidWlkIjoiNTUyNDJmNDRiZjY5MTRmODUzYWM3ZDY1MjJiOWVlMTkiLCJ1c2VybmFtZSI6Impka2F0byJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiamRrYXRvLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE2In0sImN0aW1lIjoxNDcxNDU1OTU0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzE0NTU4MDYsImhhc2giOiIzNWU1ZDJiMDMwNzdiODI2YWQ5YWU0Yjg0NjlhYjVjNWNjYjczZjRiMmMwNzdiOGNmNjAzMTk3NmRkZThiY2EzNTI1NDIyMWYyMjI4ZDVhZmNmMzg2YjNkN2JjYjRhOTc5OTAyMmY5ZmFkMGJiZGY2MWI4Njk0YjJlYWM1NWJmYiIsInNlcW5vIjo1ODUyNTB9LCJwcmV2IjoiN2Y3MjBjNzI0YWE3YWQ1ZjBhYmIzY2QwOTU5OWU0NjI3MmQ0NzI4NjM5ZTA4ODQzMzA2ZTI4N2MwNTc5YTYwZiIsInNlcW5vIjoxNSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEB7viQVjy9cbPMlVEd2OOHk7sRGjOcu7gkomEvpMUidmsuVCXAaV1hG56gelcetx4uWwkmUcb4JHaAERudHGFULqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg9zDFYRt/L9YByJCCXwcw2MrlWfI/WCNhITYhrpTlaOmjdGFnzQICp3ZlcnNpb24B
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.64
+Comment: https://keybase.io/crypto
+
+yMOpAnicbVJ7UFRVGN9FxQGHR5HVQE3MLSWdle6599zXJjaOZGQxIQMFpuC955zL
+XoFd3Afv3RItIUhyHHnVwDi9wDLKYXhpgzRipYaPxoBKVKSYLIpggKAxOks1TTOd
+f87r9/2+3/f7vtMhS0zBZmf7fZVn9vTFms/1znhMaW2uYyWM5sBFjLWEySaLG8nB
+xOXOzDYwY2VYwAKd5xWWh0CUBVZHHCuqKgs4CHUoyBgoKlAI5BUoKDqWdF4HMoAi
+p0MgYAgwy+usylgY3bBnEWee07C7KS3hJcizgg4A0mVZUgQFIJmVeYnTRHrSkCgD
+JHCEBtocLn8EFaepLhJrOOgbvWQuyvsf/L+6RQAxFAUJ87KEORUjHiMicDzkoQBZ
+TZBUiHmCRAkRWRHoUScKTyCSAafQAGVRt2eRThA4SEuCmi4qAOqywKtIwqLAcZpC
+CFD8QBdx2tVcQtG7cLbqdjBeC+Mk+Y5s4nfVZWRRyS7G+jwjSYKoEUlDQJAApmSi
+IvFYFyVR1lm/RCgSoKuIQwrSgaqzoowRklhFI5omsyqrMzsoN82Xb6BFcr9H/8kd
+m2W4bR7tL7fynA63Azly6K/N7c5zWf3K3EV5fngB0TL/JsrUDDumXaIR+cTpMhx2
+xgooErkNPzOAssxxgPpqYUhhnuEkmYYfIVDZLF3+PCSfUupEFInKYUAEFfGsRm2i
+vaHeCxBhFSEk6oQQjQeQo4MjKgpRAYcwx3O0K5ImMf7SdtsdjJXjqE41i3JS9+yq
+2+MkjPeT3u1LTeZgU+CyAP/4moKDwv8Z6jv3h/2xfqYjveC8L6qk8UhgU9z6Ynt+
+S0v1jxU1Fz57ZNcTy1+f+9W8NXSw+MUso25HRH90zKmnWFP6qrbcq2jOuXCHly+V
+PiiOUlb2Tid1913Dhzuajh56oDzXmjFrHvhprm7DvZ3P9L6ml60b/+pGa9fY8KaJ
+mLXPyqM/hLdaZ8MaHe1jXb1b2n8O3q9dKUz6/gScyAs8N3DDF5eWmVjhrupO3hva
+37gxfGwKX68ejfRMRsx/e/r46rhVJS8lfPTNLz3vpjWrPfW3t2/7PN3li+982PB5
++iyRSu2GR/tfMR+tsvlS32gbOZjcmXjx5IMHci2vlspHtq0dbL3i0JqHuUPvdO2b
+TVY9U6NN8+Mr1gSsS+x881ZUS82e8agv92gplRFaw8WDW8XUu519x+vCU0Z2L4im
+p+8qj5bTJi4NPalary/bfPjrCu+xhxjQVQSq+vl7krpDglo2rqk+OXTpzKRgKw8K
+a7npXXI5I9V3QE0Yy6gJ+G0kThw6G2+Xztr21k3UpEP4fv20xV12rXVhpye4f+no
+5cdSavsaepqbQ8e3fPr4x6G35yPbYqe4AvhFpV7/woUa/F6voGUPbTIpw/d/+N2p
++OVJQwO/ewOu9ufMPLc6fiQw+bwlubbMsiK4z5ewrwkP+7pKb2Z4Nq+Mnq6uetv+
+clV1yInW0tjJuZ1NDYMxbxWmd7C3FPgn9UvhOg==
+=K9LZ
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
