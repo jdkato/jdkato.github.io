@@ -1,0 +1,4 @@
+StylesPath = /Users/Joseph/Documents/Programming/Go/golang/src/github.com/jdkato/vale/styles
+
+[*.md]
+BasedOnStyles = TheEconomist
