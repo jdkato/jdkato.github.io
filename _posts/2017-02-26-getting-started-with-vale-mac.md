@@ -22,6 +22,7 @@ For the sake of this tutorial, we'll choose option 2. Now open Terminal.app and 
 mkdir -p ~/bin
 cd ~/bin
 tar -xvzf ~/Downloads/macOS-64bit.tar.gz
+which vale
 ```
 
 If you see "vale not found" like above, you'll need to add `vale` to your `PATH` variable. We can do that by using the text editor nano:
