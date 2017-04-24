@@ -761,3 +761,56 @@ pre {
     position: absolute;
   }
 }
+
+/* Panels
+-------------------------------------------------- */
+.panel-heading {
+    font-weight: bold;
+}
+.panel-custom {
+    border: 1px solid rgba(0,0,0,0.075);
+    border-bottom-color: rgba(0,0,0,0.125);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05),0 5px 10px rgba(0,0,0,0.05);
+    height: 150px;
+}
+.panel-custom > .panel-heading {
+    color: #FAFAFA;
+    height: 15px;
+    padding: 4px 10px;
+}
+.panel-custom > .panel-body {
+    color: #555;
+}
+.panel-green > .panel-heading {
+    background: #65D977;
+    border-color: #65D977;
+}
+.panel-blue > .panel-heading {
+    background: #57CADF;
+    border-color: #57CADF;
+}
+.panel-orange > .panel-heading {
+    background: #DFB768;
+    border-color: #DFB768;
+}
+.panel-red > .panel-heading {
+    background: rgba(255, 104, 97, 1);
+    border-color: #FF6861;
+}
+.panel-purple > .panel-heading {
+    background: #814EFA;
+    border-color: #814EFA;
+}
+.section-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+}
+.panel p {
+    margin-bottom: 5px;
+}
+
+a.panel-wrapper { text-decoration: none; }
